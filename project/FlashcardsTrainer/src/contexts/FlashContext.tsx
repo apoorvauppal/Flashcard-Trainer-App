@@ -19,5 +19,6 @@ type FlashContextType = {
     decks: Deck[];
     addDeck: (title: string) => void;
     getDeckById: (id: string) => Deck | undefined;
-    addCardToDeck: (deckId: string, card: )
+    addCardToDeck: (deckId: string, card: {question: string; answer: string}) => void;
+    
 }
