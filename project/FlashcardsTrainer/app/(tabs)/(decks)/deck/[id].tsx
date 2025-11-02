@@ -1,6 +1,6 @@
 import { useRouter, useSearchParams } from "expo-router/build/hooks";
 import React from "react";
-import {StyleSheet, View, Text} from "react-native";
+import {StyleSheet, View, Text, FlatList} from "react-native";
 import { useFlash } from "../../../../src/contexts/FlashContext";
 
 export default function DeckDetail(){
@@ -17,18 +17,37 @@ export default function DeckDetail(){
         );
     }
 
-    return(
-        <View style={styles.containter}>
-            <Text style = {styles.title}>{deck.title}</Text>
-            <Text style = {styles.count}>{deck.cards.length}</Text>
+    return (
+    <View style={styles.container}>
+      <Text style={styles.title}>{deck.title}</Text>
+      <Text style={styles.count}>{deck.cards.length} cards</Text>
 
-            {deck.cards.length===0?(
-                <View style={StyleSheet.empty}>
-                    
-            )}
-
+      {deck.cards.length === 0 ? (
+        <View style={styles.empty}>
+          <Text>This deck has no cards. Add one with +</Text>
         </View>
-    )
+      ) : (
+        <FlatList
+          data={deck.cards}
+          keyExtractor={(c) => c.id}
+          renderItem={({ item }) => (
+            <CardRow
+              card={item}
+              onToggleFavorite={() => toggleFavorite(deck.id, item.id)}
+              showDeckTitle={false}
+            />
+          )}
+        />
+      )}
+
+      <FloatingButton
+        onPress={() => {
+          // pass deckId to create-card modal
+          router.push({ pathname: "/create-card", params: { deckId: deck.id } });
+        }}
+      />
+    </View>
+  );
 }
 
 
