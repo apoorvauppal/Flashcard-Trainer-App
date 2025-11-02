@@ -85,8 +85,8 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
   };
 
     const favoriteCards: FavoriteCardFlat[] = decks.flatMap((d) =>
-    d.cards.filter((c) => c.favorite.map(c) => ({deckId: d.id, deckTitle: d.title, card:c}))
-);
+        d.cards.filter((c) => c.favorite).map(c) => ({deckId: d.id, deckTitle: d.title, card:c}))
+    );
 return (
     <FlashContext.Provider
     value = {{ decks, addDeck, getDeckById, addCardToDeck, toggleFavorite, favoriteCardsCards}}
