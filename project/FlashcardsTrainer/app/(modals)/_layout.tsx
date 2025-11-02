@@ -7,5 +7,5 @@ export default function ModalsLayout(){
             <Stack.Screen name="create-deck" options={{title:"Create Deck"}}/>
             <Stack.Screen name="create-card" options={{title:"Add Card"}}/>
         </Stack>
-    )
+    );
 }
