@@ -24,7 +24,9 @@ export default function CardRow({
                     <Text>{showAnswer ? "Hide" : "Show" }</Text>
                 </TouchableOpacity>
 
-                {typeof onToggleFavorite === "function" }
+                {typeof onToggleFavorite === "function" && (
+                    
+                )}
             </View>
         </View>
     )
