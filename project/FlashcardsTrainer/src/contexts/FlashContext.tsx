@@ -40,5 +40,7 @@ const initial: Deck[] = [
             {id: "c2", question: "What is Expo?", answer: "A platform for React Native", favorite: true},
         
         ],
-    }
-]
+    },
+];
+
+export const FlashProvider = 
