@@ -9,7 +9,8 @@ export default function TabsLayout(){
         }}
         >
             <Tabs.Screen
-            bame=
+            name="(decks)/index"
+            
         </Tabs>
     )
 }
