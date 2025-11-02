@@ -3,6 +3,7 @@ import React from "react";
 import {StyleSheet, View, Text, FlatList} from "react-native";
 import { useFlash } from "../../../../src/contexts/FlashContext";
 import CardRow from "../../../../src/components/CardRow";
+import FloatingButton from "../../../../src/components/FloatingButton";
 
 export default function DeckDetail(){
     const{id} = useSearchParams();
