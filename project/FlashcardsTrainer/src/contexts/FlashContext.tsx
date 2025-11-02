@@ -55,6 +55,8 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 
     const addCardToDeck = (deckId: string, card: {question: string; answer: string}) => {
         setDecks((prev) =>
-        prev.map((d)))
+        prev.map((d) =>
+        d.id === deckId
+    ))
     }
 }
