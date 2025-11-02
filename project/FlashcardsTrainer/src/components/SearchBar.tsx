@@ -1,4 +1,5 @@
 import React from "react";
+import
 
 export default function SearchBar({
     value, 
@@ -14,4 +15,6 @@ export default function SearchBar({
         )
     }
 
-const styles = StyleSheet
+const styles = StyleSheet.create({
+
+})
