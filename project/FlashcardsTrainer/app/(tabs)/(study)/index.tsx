@@ -16,5 +16,9 @@ const styles = StyleSheet.create({
         fontWeight:"700",
         marginBottom:8,
     },
-    empty:
+    empty:{
+        flex:1,
+        alignItems: "center",
+        justify
+    }
 })
