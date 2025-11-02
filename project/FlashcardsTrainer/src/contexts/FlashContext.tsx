@@ -72,17 +72,17 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     };
 
     const toggleFavorite = (deckId: string, cardId: string) => {
-        setDecks((prev) =>
-        prev.map((d) =>
+    setDecks((prev) =>
+      prev.map((d) =>
         d.id === deckId
-        ?{
-            ...d,
-            cards: d.cards.map((c) => c.id === cardId ? {...c, favorite: !c.favorite}:c)),
+          ? {
+              ...d,
+              cards: d.cards.map((c) => (c.id === cardId ? { ...c, favorite: !c.favorite } : c)),
             }
-        :d
-    )
-);
-    };
+          : d
+      )
+    );
+  };
 
     const favoriteCards: FavoriteCardFlat[] = decks.flatMap((d) =>
     d.cards.filter((c) => c.favorite.map(c) => ({deckId: d.id, deckTitle: d.title, card:c}))
