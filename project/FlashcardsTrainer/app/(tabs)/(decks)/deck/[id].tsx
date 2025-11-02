@@ -16,8 +16,11 @@ const styles = StyleSheet.create({
         fontWeight:"700",
     },
     count:{
-        marginBotoom:12,
+        marginBottom:12,
         color:"#666",
     },
-    
+    empty:{
+        flex:1,
+        alignItems
+    }
 })
