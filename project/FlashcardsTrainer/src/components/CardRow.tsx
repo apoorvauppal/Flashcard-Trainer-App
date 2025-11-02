@@ -23,6 +23,8 @@ export default function CardRow({
                 <TouchableOpacity onPress={() => setShowAnswer((s) => !s)} style={styles.actionBtn}>
                     <Text>{showAnswer ? "Hide" : "Show" }</Text>
                 </TouchableOpacity>
+
+                {typeof onToggleFavorite === "function" }
             </View>
         </View>
     )
