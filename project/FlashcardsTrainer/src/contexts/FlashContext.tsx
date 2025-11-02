@@ -63,9 +63,9 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
                     ...d.cards,
                 {id:generateId("card-"), question: card.question, answer: card.answer, favorite: false},
 
-        ],
-    }
-    :d
+                ],
+            }
+            :d
 )
 );
     };
