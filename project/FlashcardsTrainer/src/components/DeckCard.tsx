@@ -5,7 +5,9 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 export default function DeckCard ({deck, onPress}: {deck: Deck; onPress:() => void}){
     return(
         <TouchableOpacity onPress = {onPress} style={styles.card}>
-            <View
+            <View>
+                <Text style={styles.title}></Text>
+            </View>
         </TouchableOpacity>
     )
 }
