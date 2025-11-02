@@ -27,4 +27,6 @@ type FlashContextType = {
 
 const FlashContext = createContext<FlashContextType | undefined>(undefined);
 
-function generateId(prefix = "")
+function generateId(prefix = ""){
+    return '$'
+}
