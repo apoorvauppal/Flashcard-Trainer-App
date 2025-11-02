@@ -15,6 +15,8 @@ export default function SearchBar({
                 <TextInput>
                     placeholder={placeholder || "Search"}
                     value={value}
+                    onChangeTezt = {onChangeText}
+                    style={styles.input}
                 </TextInput>
 
             </View>
