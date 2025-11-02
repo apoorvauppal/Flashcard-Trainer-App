@@ -17,7 +17,9 @@ export default function DeckDetail(){
         );
     }
 
-    
+    return(
+        <View style={styles.containter}></View>
+    )
 }
 
 
