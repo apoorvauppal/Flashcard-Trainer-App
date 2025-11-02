@@ -20,5 +20,5 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.05, 
         elevation: 2,
     },
-    title
+    title:{fontSize: 16, fontWeight: "700"}
 })
