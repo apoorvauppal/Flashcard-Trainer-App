@@ -44,5 +44,5 @@ const initial: Deck[] = [
 ];
 
 export const FlashProvider = ({children}: {children: ReactNode}) => {
-    
+    const [decks, setDecks] = useState<Deck[]>(initial);
 }
