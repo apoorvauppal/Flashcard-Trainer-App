@@ -8,6 +8,7 @@ export default function DecksScreen(){
     const [query, setQuery] = useState("");
 
     const filtered = useMemo(() => {
-        const q = query.trim().to
+        const q = query.trim().toLowerCase();
+        if(!)
     })
 }
