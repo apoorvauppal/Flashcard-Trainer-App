@@ -13,7 +13,8 @@ export default function SearchBar({
         return(
             <View style={styles.wrapper}>
                 <TextInput>
-                    
+                    placeholder={placeholder || "Search"}
+                    value={value}
                 </TextInput>
 
             </View>
