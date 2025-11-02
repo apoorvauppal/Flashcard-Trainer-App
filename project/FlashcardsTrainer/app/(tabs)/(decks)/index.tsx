@@ -31,7 +31,7 @@ export default function DecksScreen(){
                 renderIterm={({item}) => (
                     <DeckCard
                         deck={item}
-                        onPress={() => router.push}
+                        onPress={() => router.push({pathname: '/'})}
                     >
 
                     </DeckCard>
