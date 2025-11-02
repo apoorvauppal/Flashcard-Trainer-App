@@ -14,5 +14,10 @@ const styles = StyleSheet.create({
     title:{
         fontSize:22,
         fontWeight:"700",
-    }
+    },
+    count:{
+        marginBotoom:12,
+        color:"#666",
+    },
+    
 })
