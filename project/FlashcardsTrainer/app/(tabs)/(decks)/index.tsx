@@ -10,6 +10,6 @@ export default function DecksScreen(){
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
         if(!q) return decks;
-        return decks.filter((d) => d.title.toLowerCase)
-    })
+        return decks.filter((d) => d.title.toLowerCase().includes(q));
+    }, [decks,query])
 }
