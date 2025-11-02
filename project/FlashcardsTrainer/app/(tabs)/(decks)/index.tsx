@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
+import {View} from "react-native";
 
 export default function DecksScreen(){
     const router = useRouter();
@@ -14,6 +15,6 @@ export default function DecksScreen(){
     }, [decks,query]);
 
     return(
-        <View></View>
+        <View> style={styles.container}</View>
     )
 }
