@@ -43,4 +43,6 @@ const initial: Deck[] = [
     },
 ];
 
-export const FlashProvider = ({children} :)
+export const FlashProvider = ({children}: {children: ReactNode}) => {
+    
+}
