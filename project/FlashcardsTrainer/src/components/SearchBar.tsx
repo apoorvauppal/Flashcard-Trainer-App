@@ -9,5 +9,9 @@ export default function SearchBar({
     onChangeText: (t:string) => void;
     placeholder?:string;
     }){
-        retunr{}
+        return(
+
+        )
     }
+
+const styles = StyleSheet
