@@ -11,5 +11,9 @@ export default function DecksScreen(){
         const q = query.trim().toLowerCase();
         if(!q) return decks;
         return decks.filter((d) => d.title.toLowerCase().includes(q));
-    }, [decks,query])
+    }, [decks,query]);
+
+    return(
+        
+    )
 }
