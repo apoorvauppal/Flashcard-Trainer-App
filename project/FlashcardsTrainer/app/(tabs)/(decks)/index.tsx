@@ -15,7 +15,8 @@ export default function DecksScreen(){
     }, [decks,query]);
 
     return(
-        <View> style={styles.container}</View>
+        <View style={styles.container}>
+        </View>
     )
 }
 
