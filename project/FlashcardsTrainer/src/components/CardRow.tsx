@@ -6,7 +6,9 @@ export default function CardRow({
     card, onToggleFavorite, deckTitle, showDeckTitle = false,
 }: {
     card:Card;
-    onToggleF
+    onToggleFavorite?: () => void;
+    deckTitle?: string;
+    
 }
 )
 
