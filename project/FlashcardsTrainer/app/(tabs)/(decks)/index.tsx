@@ -19,7 +19,7 @@ export default function DecksScreen(){
         <View style={styles.container}>
             <SearchBar value = {query} onChangeText={setQuery} placeholder="Search decks..."/>
             {filtered.length===0?(
-                
+                <View>
             )}
         </View>
     )
