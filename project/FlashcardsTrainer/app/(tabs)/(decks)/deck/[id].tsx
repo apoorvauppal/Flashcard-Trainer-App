@@ -10,5 +10,9 @@ const styles = StyleSheet.create({
     containter:{
         flex:1,
         padding:12,
+    },
+    title:{
+        fontSize:22,
+        fontWeight:"700",
     }
 })
