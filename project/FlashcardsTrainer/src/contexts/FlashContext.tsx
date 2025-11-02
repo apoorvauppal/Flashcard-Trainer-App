@@ -7,3 +7,8 @@ export type Card = {
     favorite?: boolean;
 };
 
+export type Deck = {
+    id:string;
+    title: string;
+    cards: Card[];
+}
