@@ -2,6 +2,7 @@ import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
 import {View, StyleSheet} from "react-native";
+import SearchBar from "../../../src/components/SearchBar";
 
 export default function DecksScreen(){
     const router = useRouter();
@@ -16,6 +17,9 @@ export default function DecksScreen(){
 
     return(
         <View style={styles.container}>
+            <SearchBar value = {query} onChangeText>
+
+            </SearchBar>
         </View>
     )
 }
