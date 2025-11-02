@@ -83,4 +83,6 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     )
 );
     };
+
+    const favoriteCards: FavoriteCardFlat
 }
