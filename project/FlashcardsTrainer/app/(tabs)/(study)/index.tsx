@@ -7,5 +7,9 @@ export default function StudyScreen()[
 
 
 const styles = StyleSheet.create({
-
+    container:{
+        flex:1,
+        padding:12,
+    },
+    header:
 })
