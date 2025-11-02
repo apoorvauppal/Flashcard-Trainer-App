@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
     card:{
         padding: 14, 
         borderRadius: 10, 
-        backgroundColor: #fff,
+        backgroundColor: "#fff",
+        marginBottom: 10, 
+        shadowColor: "#000", 
+
     }
 })
