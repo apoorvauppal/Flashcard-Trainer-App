@@ -17,6 +17,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         marginBottom: 10, 
         shadowColor: "#000", 
-
-    }
+        shadowOpacity: 0.05, 
+        elevation: 2,
+    },
+    title
 })
