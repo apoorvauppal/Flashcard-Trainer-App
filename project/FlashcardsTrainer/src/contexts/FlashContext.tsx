@@ -77,8 +77,8 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
         d.id === deckId
         ?{
             ...d,
-            cards: d.cards.map((c) => c.id === cardId ? {...c, favorite: !c.favorite} :c)),
-        }
+            cards: d.cards.map((c) => c.id === cardId ? {...c, favorite: !c.favorite}:c)),
+            }
         :d
     )
 );
