@@ -8,9 +8,10 @@ export default function CardRow({
     card:Card;
     onToggleFavorite?: () => void;
     deckTitle?: string;
+    showDeckTitle?: boolean;
+}){
     
 }
-)
 
 
 const styles = StyleSheet.create({
