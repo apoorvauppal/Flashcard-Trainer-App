@@ -36,7 +36,8 @@ const initial: Deck[] = [
         id: "deck-1",
         title:"Sample Deck",
         cards:[
-            {id: "c1", question: "What is React?", answer: "A JS library for UIs"}
+            {id: "c1", question: "What is React?", answer: "A JS library for UIs", favorite: false},
+            {id:}
         ]
     }
 ]
