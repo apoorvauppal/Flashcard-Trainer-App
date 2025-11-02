@@ -27,6 +27,9 @@ export default function DecksScreen(){
                 <FlatList
                 data={filtered} 
                 keyExtractor={(item) => item.id}
+                renderIterm={({item}) => (
+                    
+                )}
                 >
 
                 </FlatList>
