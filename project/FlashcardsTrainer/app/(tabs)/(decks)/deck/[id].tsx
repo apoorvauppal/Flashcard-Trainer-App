@@ -1,10 +1,11 @@
-import { useSearchParams } from "expo-router/build/hooks";
+import { useRouter, useSearchParams } from "expo-router/build/hooks";
 import React from "react";
 import {StyleSheet} from "react-native";
 
 export default function DeckDetail(){
     const{id} = useSearchParams();
-    const router = useR
+    const router = useRouter();
+    const {getDeckById, toggleFavorite}
 }
 
 
