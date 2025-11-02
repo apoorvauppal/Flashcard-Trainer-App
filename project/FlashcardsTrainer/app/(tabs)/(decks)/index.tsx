@@ -9,6 +9,7 @@ export default function DecksScreen(){
 
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
-        if(!)
+        if(!q) return decks;
+        return decks.filter((d) => d.title.toLowerCase)
     })
 }
