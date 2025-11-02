@@ -8,6 +8,9 @@ export default function CardRow({
 
 const styles = StyleSheet.create({
     row: { 
-        flexDirection
+        flexDirection: "row",
+        padding: 12,
+        borderRadius: 10, 
+        
     }
 })
