@@ -24,6 +24,7 @@ export default function DeckDetail(){
 
             {deck.cards.length===0?(
                 <View style={StyleSheet.empty}>
+                    
             )}
 
         </View>
