@@ -6,7 +6,7 @@ import { useFlash } from "../../src/contexts/FlashContext";
 
 export default function CreateCardModal() {
   const router = useRouter();
-  const { deckId } = useSearchParams();
+  const { deckId } = useLocalSearchParams();
   const { addCardToDeck, getDeckById } = useFlash();
   const deck = getDeckById(String(deckId));
 
