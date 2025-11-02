@@ -47,7 +47,7 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     const [decks, setDecks] = useState<Deck[]>(initial);
 
     const addDeck = (title: string) => {
-        const newDeck: Deck = (id: generateId("deck-"), title, cards: []);
+        const newDeck: Deck = {id: generateId("deck-"), title, cards: []};
         setDecks((d) => [newDeck, ...d]);
     }
 }
