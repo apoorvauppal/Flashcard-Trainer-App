@@ -4,6 +4,7 @@ import { useFlash } from "../../../src/contexts/FlashContext";
 import {View, StyleSheet, Text} from "react-native";
 import SearchBar from "../../../src/components/SearchBar";
 import { FlatList } from "react-native/types_generated/index";
+import DeckCard from "../../../src/components/DeckCard";
 
 export default function DecksScreen(){
     const router = useRouter();
@@ -28,7 +29,12 @@ export default function DecksScreen(){
                 data={filtered} 
                 keyExtractor={(item) => item.id}
                 renderIterm={({item}) => (
-                    
+                    <DeckCard
+                        deck={item}
+                        
+                    >
+
+                    </DeckCard>
                 )}
                 >
 
