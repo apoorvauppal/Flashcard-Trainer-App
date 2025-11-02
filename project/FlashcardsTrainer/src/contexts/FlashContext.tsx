@@ -48,6 +48,6 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 
     const addDeck = (title: string) => {
         const newDeck: Deck = (id: generateId("deck-"), title, cards: []);
-        setDecks((d))
+        setDecks((d) => [newDeck, ...d]);
     }
 }
