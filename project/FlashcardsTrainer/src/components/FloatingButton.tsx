@@ -4,12 +4,10 @@ import{StyleSheet, TouchableOpacity, Text} from "react-native";
 export default function FloatingButton({onPress}: {onPress: () => void}){
     return(
         <TouchableOpacity onPress = {onPress} style = {styles.fab}>
-            <Text></Text>
+            <Text style={styles.plus}>+</Text>
         </TouchableOpacity>
-    )
+    );
 }
-
-
 
 
 const styles = StyleSheet.create({
