@@ -7,5 +7,8 @@ export default function DeckDetail()[
 
 
 const styles = StyleSheet.create({
-    containter
+    containter:{
+        flex:1,
+        padding:12,
+    }
 })
