@@ -83,4 +83,4 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     )
 );
     };
-};
+}
