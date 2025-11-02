@@ -22,7 +22,9 @@ export default function DeckDetail(){
             <Text style = {styles.title}>{deck.title}</Text>
             <Text style = {styles.count}>{deck.cards.length}</Text>
 
-            {deck.cards.length}
+            {deck.cards.length===0?(
+                <View style={StyleSheet.empty}>
+            )}
 
         </View>
     )
