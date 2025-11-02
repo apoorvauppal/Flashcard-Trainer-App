@@ -9,11 +9,11 @@ export default function TabsLayout(){
         }}
         >
             <Tabs.Screen
-                name="(decks)/index"
+                name="(decks)"
                 options={{title:"Decks"}}
             />
             <Tabs.Screen
-                name="(study)/index"
+                name="(study)"
                 options={{title:"Study"}}
             />
         </Tabs>
