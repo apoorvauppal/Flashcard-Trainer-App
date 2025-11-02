@@ -95,3 +95,7 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
         </FlashContext.Provider>
     );
 };
+
+export const useFlash = () => {
+    const ctx = useContext
+}
