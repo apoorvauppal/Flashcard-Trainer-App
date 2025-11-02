@@ -14,7 +14,7 @@ export default function CardRow({
     return(
         <View style = {styles.row}>
             <View style = {{ flex: 1}}>
-                {showDeckTitle && deckTitle ? <Text style = styles={.deckTitle}>{deckTitle</Text>:null}
+                {showDeckTitle && deckTitle ? <Text style ={styles.deckTitle}>{deckTitle</Text>:null}
 
             </View>
         </View>
