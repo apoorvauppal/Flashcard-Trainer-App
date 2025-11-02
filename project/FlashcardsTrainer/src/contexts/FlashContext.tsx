@@ -85,5 +85,5 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     };
 
     const favoriteCards: FavoriteCardFlat[] = decks.flatMap((d) =>
-    d.cards.filter((c) =>))
+    d.cards.filter((c) => c.favorite.map(c) => ))
 }
