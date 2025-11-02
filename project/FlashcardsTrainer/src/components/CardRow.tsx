@@ -25,7 +25,9 @@ export default function CardRow({
                 </TouchableOpacity>
 
                 {typeof onToggleFavorite === "function" && (
-                    
+                    <TouchableOpacity>
+                        
+                    </TouchableOpacity>
                 )}
             </View>
         </View>
