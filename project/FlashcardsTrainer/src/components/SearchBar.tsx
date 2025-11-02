@@ -1,5 +1,6 @@
 import React from "react";
 import{StyleSheet, View} from "react-native";
+import { TextInput } from "react-native/types_generated/index";
 
 export default function SearchBar({
     value, 
@@ -11,7 +12,10 @@ export default function SearchBar({
     placeholder?:string;
     }){
         return(
-            <
+            <View style={styles.wrapper}>
+                <TextInput
+
+            </View>
         )
     }
 
