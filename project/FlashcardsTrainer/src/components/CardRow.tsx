@@ -14,5 +14,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         marginBottom: 10,
     },
-    
+    question:{
+        fontWeight: '600',
+        fontSize
+    }
 })
