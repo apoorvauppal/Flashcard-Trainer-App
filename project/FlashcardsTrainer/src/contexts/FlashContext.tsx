@@ -89,6 +89,9 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 );
 return (
     <FlashContext.Provider
-    value = {{ decks, addDeck, getDeckById, addCardToDeck, toggleFavorite, }}
+    value = {{ decks, addDeck, getDeckById, addCardToDeck, toggleFavorite, favoriteCardsCards}}
+    >
+        {children}
+    </FlashContext.Provider>
 )
 }
