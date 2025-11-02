@@ -43,4 +43,4 @@ const initial: Deck[] = [
     },
 ];
 
-export const FlashProvider = 
+export const FlashProvider = ({children} :)
