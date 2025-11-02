@@ -60,7 +60,7 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
     ?{
         ...d,
         cards:[...d.cards,
-            
+            {id:generateId("card-"), question: card.question, answer:}
         ]
     }))
     }
