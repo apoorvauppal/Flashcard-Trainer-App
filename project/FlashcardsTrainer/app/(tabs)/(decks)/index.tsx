@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
-import {View, StyleSheet} from "react-native";
+import {View, StyleSheet, Text} from "react-native";
 import SearchBar from "../../../src/components/SearchBar";
 
 export default function DecksScreen(){
