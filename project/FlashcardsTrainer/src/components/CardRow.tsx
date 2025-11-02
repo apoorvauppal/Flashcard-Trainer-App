@@ -4,7 +4,11 @@ import { Card } from "../contexts/FlashContext";
 
 export default function CardRow({
     card, onToggleFavorite, deckTitle, showDeckTitle = false,
-})
+}: {
+    card:Card;
+    onToggleF
+}
+)
 
 
 const styles = StyleSheet.create({
