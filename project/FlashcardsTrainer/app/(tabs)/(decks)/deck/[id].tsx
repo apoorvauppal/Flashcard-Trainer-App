@@ -11,7 +11,9 @@ export default function DeckDetail(){
     const deck = getDeckById(String(id));
     if(!deck) {
         return(
-            <Vi
+            <View style>
+
+            </View>
         )
     }
 }
