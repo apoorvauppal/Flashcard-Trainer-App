@@ -1,5 +1,5 @@
 import React from 'react';
-import{StyleSheet} from "react-native";
+import{StyleSheet, View} from "react-native";
 import { Card } from "../contexts/FlashContext";
 
 export default function CardRow({
@@ -11,6 +11,9 @@ export default function CardRow({
     showDeckTitle?: boolean;
 }){
     const [showAnswer, setShowAnswer] = useState(false);
+    return(
+        <View></View>
+    )
 }
 
 
