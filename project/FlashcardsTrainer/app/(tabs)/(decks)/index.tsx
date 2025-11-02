@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
-import {View} from "react-native";
+import {View, StyleSheet} from "react-native";
 
 export default function DecksScreen(){
     const router = useRouter();
@@ -18,3 +18,8 @@ export default function DecksScreen(){
         <View> style={styles.container}</View>
     )
 }
+
+
+const styles = StyleSheet.create({
+
+})
