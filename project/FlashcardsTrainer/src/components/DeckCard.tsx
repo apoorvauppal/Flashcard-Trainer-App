@@ -7,3 +7,9 @@ export default function DeckCard ({deck, onPress}: {deck: Deck; onPress:() => vo
         <TouchableOpacity onPress = {onPress} style={StyleS}
     )
 }
+
+
+
+const styles = StyleSheet.create({
+    
+})
