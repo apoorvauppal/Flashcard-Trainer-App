@@ -98,5 +98,6 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 
 export const useFlash = () => {
     const ctx = useContext(FlashContext);
-    if()
-}
+    if(!ctx) throw new Error("useFlash must be used within FlashProvider");
+    return ctx;
+};
