@@ -93,5 +93,5 @@ return (
     >
         {children}
     </FlashContext.Provider>
-)
-}
+);
+};
