@@ -12,13 +12,12 @@ export default function SearchBar({
     }){
         return(
             <View style={styles.wrapper}>
-                <TextInput>
+                <TextInput
                     placeholder={placeholder || "Search"}
                     value={value}
                     onChangeTezt = {onChangeText}
                     style={styles.input}
-                </TextInput>
-
+                
             </View>
         )
     }
