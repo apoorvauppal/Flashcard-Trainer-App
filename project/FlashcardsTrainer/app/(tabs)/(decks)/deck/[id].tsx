@@ -12,10 +12,12 @@ export default function DeckDetail(){
     if(!deck) {
         return(
             <View style = {styles.empty}>
-                <Te
+                <Text>Deck not found.</Text>
             </View>
-        )
+        );
     }
+
+    
 }
 
 
