@@ -8,6 +8,8 @@ export default function TabsLayout(){
             headerShown:true,
         }}
         >
+            <Tabs.Screen
+            bame=
         </Tabs>
     )
 }
