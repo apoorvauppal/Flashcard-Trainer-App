@@ -2,6 +2,7 @@ import { useRouter, useSearchParams } from "expo-router/build/hooks";
 import React from "react";
 import {StyleSheet, View, Text, FlatList} from "react-native";
 import { useFlash } from "../../../../src/contexts/FlashContext";
+import CardRow from "../../../../src/components/CardRow";
 
 export default function DeckDetail(){
     const{id} = useSearchParams();
@@ -52,7 +53,7 @@ export default function DeckDetail(){
 
 
 const styles = StyleSheet.create({
-    containter:{
+    container:{
         flex:1,
         padding:12,
     },
