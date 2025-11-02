@@ -14,6 +14,6 @@ export default function DecksScreen(){
     }, [decks,query]);
 
     return(
-        
+        <View></View>
     )
 }
