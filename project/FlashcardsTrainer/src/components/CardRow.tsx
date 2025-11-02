@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
         fontSize: 15,
     },
     answer:{
-        
-    }
+        marginTop: 8,
+        color: "#333",
+    },
+    actions:
 })
