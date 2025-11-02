@@ -37,7 +37,7 @@ export default function DecksScreen(){
                 )}
                 />
             }}
-            FloatingButton onPress={}
+            FloatingButton onPress={() => router.push("/create-deck")}/>
         </View>
     )
 }
