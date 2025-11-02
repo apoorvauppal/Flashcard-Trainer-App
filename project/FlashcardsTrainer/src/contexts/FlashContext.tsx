@@ -14,3 +14,7 @@ export type Deck = {
 };
 
 type FvaoriteCardFlat = {deckId: string; deckTitle: string; card: Card}
+
+type FlashContextType = {
+    decks: Deck[]
+}
