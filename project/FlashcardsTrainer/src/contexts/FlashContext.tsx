@@ -50,4 +50,6 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
         const newDeck: Deck = {id: generateId("deck-"), title, cards: []};
         setDecks((d) => [newDeck, ...d]);
     }
+
+    const getDeckById = (id: string) => decks.find
 }
