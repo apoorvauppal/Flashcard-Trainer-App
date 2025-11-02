@@ -13,4 +13,4 @@ export type Deck = {
     cards: Card[];
 };
 
-type FvaoriteCardFlat = {}
+type FvaoriteCardFlat = {deckId: string; deckTitle: string; card: Card}
