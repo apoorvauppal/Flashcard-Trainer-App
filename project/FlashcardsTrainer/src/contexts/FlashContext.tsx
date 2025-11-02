@@ -28,5 +28,5 @@ type FlashContextType = {
 const FlashContext = createContext<FlashContextType | undefined>(undefined);
 
 function generateId(prefix = ""){
-    return '${prefix}${Date.now()'
+    return '${prefix}${Date.now().toString(36)}'
 }
