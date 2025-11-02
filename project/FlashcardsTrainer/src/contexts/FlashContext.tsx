@@ -23,5 +23,7 @@ type FlashContextType = {
     toggleFavorite: (deckId: string, cardId: string) => void
     favoriteCards: FavoriteCardFlat[];
 
-    const FlashContext = createContext<FlashContextType | undefined
+    const FlashContext = createContext<FlashContextType | undefined>(undefined);
+
+    
 }
