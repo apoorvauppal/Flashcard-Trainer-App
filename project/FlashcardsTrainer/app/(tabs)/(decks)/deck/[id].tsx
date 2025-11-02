@@ -1,6 +1,6 @@
 import { useRouter, useSearchParams } from "expo-router/build/hooks";
 import React from "react";
-import {StyleSheet, View} from "react-native";
+import {StyleSheet, View, Text} from "react-native";
 import { useFlash } from "../../../../src/contexts/FlashContext";
 
 export default function DeckDetail(){
@@ -11,8 +11,8 @@ export default function DeckDetail(){
     const deck = getDeckById(String(id));
     if(!deck) {
         return(
-            <View style>
-
+            <View style = {styles.empty}>
+                <Te
             </View>
         )
     }
