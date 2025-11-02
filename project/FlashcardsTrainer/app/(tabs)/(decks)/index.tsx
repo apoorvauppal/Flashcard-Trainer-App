@@ -32,13 +32,11 @@ export default function DecksScreen(){
                     <DeckCard
                         deck={item}
                         onPress={() => router.push({pathname: '/(decks)/deck/${item.id}'.replace(" ", "")})}
-                    >
+                    />
 
-                    </DeckCard>
                 )}
-                >
+                />
 
-                </FlatList>
             )
         </View>
     )
