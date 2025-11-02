@@ -51,5 +51,5 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
         setDecks((d) => [newDeck, ...d]);
     }
 
-    const getDeckById = (id: string) => decks.find
+    const getDeckById = (id: string) => decks.find((d) => d.id === id);
 }
