@@ -15,11 +15,11 @@ export default function SearchBar({
                 <TextInput
                     placeholder={placeholder || "Search"}
                     value={value}
-                    onChangeTezt = {onChangeText}
+                    onChangeText = {onChangeText}
                     style={styles.input}
-                
+                />
             </View>
-        )
+        );
     }
 
 const styles = StyleSheet.create({
