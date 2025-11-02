@@ -6,6 +6,8 @@ export default function SearchBar({
     placeholder,
 }:{
     value: string, 
-    onChangeText
+    onChangeText: (t:string) => void;
+    placeholder?:string;
+    }){
+        retunr{}
     }
-)
