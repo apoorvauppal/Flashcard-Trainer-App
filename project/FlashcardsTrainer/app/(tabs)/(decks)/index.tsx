@@ -4,6 +4,7 @@ import { useFlash } from "../../../src/contexts/FlashContext";
 import {View, StyleSheet, Text, FlatList} from "react-native";
 import SearchBar from "../../../src/components/SearchBar";
 import DeckCard from "../../../src/components/DeckCard";
+import FloatingButton from "../../../src/components/FloatingButton";
 
 export default function DecksScreen(){
     const router = useRouter();
