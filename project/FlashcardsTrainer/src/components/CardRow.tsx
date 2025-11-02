@@ -21,7 +21,7 @@ export default function CardRow({
 
             <View style = {styles.actions}>
                 <TouchableOpacity> onPress = {() => setShowAnswer((s) => !s)} style = {styles.actionBtn}>
-                    
+                    <Text></Text>
                 </TouchableOpacity>
             </View>
         </View>
