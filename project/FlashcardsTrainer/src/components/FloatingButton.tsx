@@ -2,7 +2,7 @@ import React from "react";
 import{StyleSheet} from "react-native";
 
 export default function FloatingButton({onPress}: {onPress: () => void}){
-
+    
 }
 
 
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
     plus:{
         color:"white",
         fontSize:28,
-        lineHiehgt:28
+        lineHeight:28,
     }
-})
+});
