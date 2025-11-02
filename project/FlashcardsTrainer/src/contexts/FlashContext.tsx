@@ -20,5 +20,6 @@ type FlashContextType = {
     addDeck: (title: string) => void;
     getDeckById: (id: string) => Deck | undefined;
     addCardToDeck: (deckId: string, card: {question: string; answer: string}) => void;
-    toggleFavorite: (deckId: string, cardId: string) 
+    toggleFavorite: (deckId: string, cardId: string) => void
+    favoriteCards: FavoriteCardFlat[];
 }
