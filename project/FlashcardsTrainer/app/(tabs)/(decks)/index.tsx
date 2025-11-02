@@ -7,5 +7,7 @@ export default function DecksScreen(){
     const {decks} = useFlash();
     const [query, setQuery] = useState("");
 
-    const filtered = useMemo(() =>)
+    const filtered = useMemo(() => {
+        const q = query.trim().to
+    })
 }
