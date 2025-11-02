@@ -44,7 +44,6 @@ export default function DeckDetail(){
 
       <FloatingButton
         onPress={() => {
-          // pass deckId to create-card modal
           router.push({ pathname: "/create-card", params: { deckId: deck.id } });
         }}
       />
