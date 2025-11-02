@@ -11,5 +11,9 @@ const styles = StyleSheet.create({
         flex:1,
         padding:12,
     },
-    header:
+    header:{
+        fontSize:20,
+        fontWeight:"700",
+        marginBottom:8,
+    }
 })
