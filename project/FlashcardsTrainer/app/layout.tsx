@@ -1,5 +1,5 @@
 import React from "react";
-import {FlashProvider} from ""
+import {FlashProvider} from "../src/contents/FlashProvider"
 
 export default function RootLayout(){
     return(
