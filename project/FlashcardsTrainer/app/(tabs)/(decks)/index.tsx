@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
 import {View, StyleSheet, Text} from "react-native";
 import SearchBar from "../../../src/components/SearchBar";
+import { FlatList } from "react-native/types_generated/index";
 
 export default function DecksScreen(){
     const router = useRouter();
@@ -22,6 +23,12 @@ export default function DecksScreen(){
                 <View style={styles.empty}>
                     <Text> No decks found. Create out with +</Text>
                 </View>
+            ) : (
+                <FlatList
+                data
+                >
+
+                </FlatList>
             )
         </View>
     )
