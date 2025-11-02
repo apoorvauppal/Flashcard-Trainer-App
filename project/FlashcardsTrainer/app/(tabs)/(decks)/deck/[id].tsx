@@ -19,7 +19,9 @@ export default function DeckDetail(){
 
     return(
         <View style={styles.containter}>
-            <Text style = {styles.title}>{deck.title</Text>
+            <Text style = {styles.title}>{deck.title}</Text>
+            <Text style = {styles.count}>{deck.cards.length}</Text>
+
         </View>
     )
 }
