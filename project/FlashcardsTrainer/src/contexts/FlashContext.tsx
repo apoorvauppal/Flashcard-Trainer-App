@@ -18,5 +18,5 @@ type FvaoriteCardFlat = {deckId: string; deckTitle: string; card: Card}
 type FlashContextType = {
     decks: Deck[];
     addDeck: (title: string) => void;
-    getDeckById: (id: string) =
+    getDeckById: (id: string) => Deck | undefined
 }
