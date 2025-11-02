@@ -1,5 +1,8 @@
 import React from "react";
 
-export defauly function TabsLayout(){
-    
+export default function TabsLayout(){
+    return(
+        <Tabs>
+        </Tabs>
+    )
 }
