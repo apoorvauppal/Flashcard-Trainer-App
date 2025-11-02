@@ -11,5 +11,9 @@ export default function DeckCard ({deck, onPress}: {deck: Deck; onPress:() => vo
 
 
 const styles = StyleSheet.create({
-
+    card:{
+        padding: 14, 
+        borderRadius: 10, 
+        backgroundColor: #fff,
+    }
 })
