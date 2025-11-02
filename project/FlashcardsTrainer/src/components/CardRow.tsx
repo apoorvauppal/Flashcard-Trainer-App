@@ -12,7 +12,11 @@ export default function CardRow({
 }){
     const [showAnswer, setShowAnswer] = useState(false);
     return(
-        <View></View>
+        <View style = {styles.row}>
+            <View> styl
+
+            </View>
+        </View>
     )
 }
 
