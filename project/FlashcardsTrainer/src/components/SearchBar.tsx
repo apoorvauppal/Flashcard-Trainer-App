@@ -18,5 +18,11 @@ export default function SearchBar({
 const styles = StyleSheet.create({
     wrapper: {
         marginBottom: 12,
+    },
+    input:{
+        padding: 10, 
+        borderRadius:8,
+        borderWidth:1,
+        
     }
 })
