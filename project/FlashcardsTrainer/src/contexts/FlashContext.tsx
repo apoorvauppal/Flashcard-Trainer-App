@@ -1,5 +1,4 @@
 import React, {createContext, ReactNode, useContext, useState} from "react";
-import { diffClamp } from "react-native/types_generated/Libraries/Animated/AnimatedExports";
 
 export type Card = {
     id: string;
