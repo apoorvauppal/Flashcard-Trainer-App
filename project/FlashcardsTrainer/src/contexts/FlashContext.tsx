@@ -89,6 +89,6 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 );
 return (
     <FlashContext.Provider
-    
+    value = {{ decks, addDeck, getDeckById, addCardToDeck, toggleFavorite, }}
 )
 }
