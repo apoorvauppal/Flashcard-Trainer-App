@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import{StyleSheet, View, Text} from "react-native";
+import{StyleSheet, View, Text, TouchableOpacity} from "react-native";
 import { Card } from "../contexts/FlashContext";
 
 export default function CardRow({
@@ -19,7 +19,11 @@ export default function CardRow({
             {showAnswer && <Text style = {styles.answer}>{card.answer}</Text>}
             </View>
 
-            <View style = {styles.actions}></View>
+            <View style = {styles.actions}>
+                <TouchableOpacity>
+                    
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
