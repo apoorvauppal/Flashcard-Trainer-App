@@ -72,6 +72,8 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
 
     const toggleFavorite = (deckId: string, cardId: string) => {
         setDecks((prev) =>
-        prev.map((d) ))
+        prev.map((d) =>
+        d.id === deckId
+        ))
     }
 }
