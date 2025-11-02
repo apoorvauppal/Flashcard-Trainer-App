@@ -19,7 +19,7 @@ export default function DeckDetail(){
 
     return(
         <View style={styles.containter}>
-            <Text></Text>
+            <Text style = {styles.title}>{deck.title</Text>
         </View>
     )
 }
