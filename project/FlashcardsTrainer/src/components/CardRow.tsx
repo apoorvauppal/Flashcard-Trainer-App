@@ -20,8 +20,8 @@ export default function CardRow({
             </View>
 
             <View style = {styles.actions}>
-                <TouchableOpacity>
-                    
+                <TouchableOpacity> onPress = {() => setShowAnswer((s) => !s)}
+
                 </TouchableOpacity>
             </View>
         </View>
