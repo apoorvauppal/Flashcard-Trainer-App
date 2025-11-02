@@ -1,9 +1,8 @@
 import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { useFlash } from "../../../src/contexts/FlashContext";
-import {View, StyleSheet, Text} from "react-native";
+import {View, StyleSheet, Text, FlatList} from "react-native";
 import SearchBar from "../../../src/components/SearchBar";
-import { FlatList } from "react-native/types_generated/index";
 import DeckCard from "../../../src/components/DeckCard";
 
 export default function DecksScreen(){
@@ -28,7 +27,7 @@ export default function DecksScreen(){
                 <FlatList
                 data={filtered} 
                 keyExtractor={(item) => item.id}
-                renderIterm={({item}) => (
+                renderItem={({item}) => (
                     <DeckCard
                         deck={item}
                         onPress={() => router.push({pathname: '/(decks)/deck/${item.id}'.replace(" ", "")})}
