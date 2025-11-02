@@ -6,3 +6,4 @@ export type Card = {
     answer:string;
     favorite?: boolean;
 };
+
