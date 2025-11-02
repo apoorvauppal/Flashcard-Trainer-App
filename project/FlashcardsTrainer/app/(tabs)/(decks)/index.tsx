@@ -21,7 +21,8 @@ export default function DecksScreen(){
             {filtered.length===0?(
                 <View style={styles.empty}>
                     <Text> No decks found. Create out with +</Text>
-            )}
+                </View>
+            )
         </View>
     )
 }
