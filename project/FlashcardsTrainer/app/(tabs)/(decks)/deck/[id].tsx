@@ -1,4 +1,4 @@
-import { useRouter, useSearchParams } from "expo-router/build/hooks";
+import { useRouter, useLocalSearchParams } from "expo-router/build/hooks";
 import React from "react";
 import {StyleSheet, View, Text, FlatList} from "react-native";
 import { useFlash } from "../../../../src/contexts/FlashContext";
@@ -6,7 +6,7 @@ import CardRow from "../../../../src/components/CardRow";
 import FloatingButton from "../../../../src/components/FloatingButton";
 
 export default function DeckDetail(){
-    const{id} = useSearchParams();
+    const{id} = useLocalSearchParams();
     const router = useRouter();
     const {getDeckById, toggleFavorite} = useFlash();
 
