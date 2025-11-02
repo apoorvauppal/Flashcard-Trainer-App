@@ -57,6 +57,11 @@ export const FlashProvider = ({children}: {children: ReactNode}) => {
         setDecks((prev) =>
         prev.map((d) =>
         d.id === deckId
-    ))
+    ?{
+        ...d,
+        cards:[...d.cards,
+            
+        ]
+    }))
     }
 }
