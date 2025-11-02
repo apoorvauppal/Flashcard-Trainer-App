@@ -1,5 +1,5 @@
 import React from "react";
-import{StyleSheet} from "react-native";
+import{StyleSheet, View} from "react-native";
 
 export default function SearchBar({
     value, 
@@ -11,7 +11,7 @@ export default function SearchBar({
     placeholder?:string;
     }){
         return(
-
+            <
         )
     }
 
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         borderColor:"#ddd",
         backgroundColor:"#fff",
     }
-})
+});
