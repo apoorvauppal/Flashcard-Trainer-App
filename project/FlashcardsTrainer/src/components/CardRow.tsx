@@ -3,7 +3,7 @@ import{StyleSheet} from "react-native";
 import { Card } from "../contexts/FlashContext";
 
 export default function CardRow({
-    card, onToggleFavorite
+    card, onToggleFavorite, deckTitle, showDeckTitle = false,
 })
 
 
