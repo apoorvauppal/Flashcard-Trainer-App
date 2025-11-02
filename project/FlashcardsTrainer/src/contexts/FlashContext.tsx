@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from "react";
+import React, {createContext, ReactNode, useContext, useState} from "react";
 
 export type Card = {
     id: string;
