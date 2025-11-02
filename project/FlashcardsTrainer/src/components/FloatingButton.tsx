@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         elevation:4,
         shadowColor:"#000",
-        shadowopacity:0.2
-    }
+        shadowOpacity:0.2,
+    },
+    
 })
