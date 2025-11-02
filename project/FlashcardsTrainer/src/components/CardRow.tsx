@@ -22,5 +22,9 @@ const styles = StyleSheet.create({
         marginTop: 8,
         color: "#333",
     },
-    actions: {justifyContent: "space-between", align}
+    actions: {
+        justifyContent: "space-between", 
+        alignItems: "center",
+    },
+    
 })
