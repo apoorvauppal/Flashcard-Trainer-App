@@ -10,7 +10,8 @@ export default function TabsLayout(){
         >
             <Tabs.Screen
             name="(decks)/index"
-            options={{title:{"Decks"}}}
+            options={{title:{"Decks"}}
+            />
         </Tabs>
     )
 }
