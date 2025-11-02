@@ -10,7 +10,7 @@ export default function CardRow({
     deckTitle?: string;
     showDeckTitle?: boolean;
 }){
-    
+    const [showAnswer, setShowAnswer] = useState(false);
 }
 
 
