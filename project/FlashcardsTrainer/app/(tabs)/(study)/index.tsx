@@ -1,6 +1,7 @@
 import React from "react";
-import {StyleSheet} from "react-native";
+import {StyleSheet, View, Text, FlatList} from "react-native";
 import { useFlash } from "../../../src/contexts/FlashContext";
+import CardRow from "../../../src/components/CardRow";
 
 export default function StudyScreen(){
     const{favoriteCards} = useFlash();
