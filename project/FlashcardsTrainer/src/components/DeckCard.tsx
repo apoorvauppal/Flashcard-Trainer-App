@@ -1,3 +1,3 @@
 import React from 'react';
 
-expo
+export default function DeckCard ({deck, onPress}:)
