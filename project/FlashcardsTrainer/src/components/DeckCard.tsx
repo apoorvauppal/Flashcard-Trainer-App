@@ -7,7 +7,7 @@ export default function DeckCard ({deck, onPress}: {deck: Deck; onPress:() => vo
         <TouchableOpacity onPress = {onPress} style={styles.card}>
             <View>
                 <Text style={styles.title}>{deck.title}</Text>
-                <Text style={styles.title}>{deck.title}</Text>
+                <Text style={styles.count}>{deck.cards.length}</Text>
             </View>
         </TouchableOpacity>
     )
