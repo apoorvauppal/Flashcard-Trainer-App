@@ -23,5 +23,9 @@ const styles = StyleSheet.create({
         shadowColor:"#000",
         shadowOpacity:0.2,
     },
-    
+    plus:{
+        color:"white",
+        fontSize:28,
+        lineHiehgt:28
+    }
 })
