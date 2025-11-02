@@ -1,11 +1,12 @@
 import React from 'react';
 import { Deck } from '../contexts/FlashContext';
-import { TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, StyleSheet, View, Text } from 'react-native';
 
 export default function DeckCard ({deck, onPress}: {deck: Deck; onPress:() => void}){
     return(
         <TouchableOpacity onPress = {onPress} style={styles.card}>
             <View>
+                <Text style={styles.title}>{deck.title}</Text>
                 <Text style={styles.title}>{deck.title}</Text>
             </View>
         </TouchableOpacity>
