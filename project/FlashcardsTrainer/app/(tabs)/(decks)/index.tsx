@@ -21,5 +21,7 @@ export default function DecksScreen(){
 
 
 const styles = StyleSheet.create({
-
+    container:{
+        flex:1
+    }
 })
