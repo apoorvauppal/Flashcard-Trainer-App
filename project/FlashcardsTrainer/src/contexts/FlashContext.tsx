@@ -32,5 +32,8 @@ function generateId(prefix = ""){
 }
 
 const initial: Deck[] = [
-    
+    {
+        id: "deck-1",
+        title:"Sample Deck",
+    }
 ]
