@@ -3,7 +3,7 @@ import{StyleSheet} from "react-native";
 
 export default function FloatingButton({onPress}: {onPress: () => void}){
     return(
-        <TouchableOpacity onPress></TouchableOpacity>
+        <TouchableOpacity onPress = {onpress} style = {styles.fab}}></TouchableOpacity>
     )
 }
 
