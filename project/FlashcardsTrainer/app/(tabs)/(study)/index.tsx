@@ -1,9 +1,12 @@
 import React from "react";
 import {StyleSheet} from "react-native";
+import { useFlash } from "../../../src/contexts/FlashContext";
 
-export default function StudyScreen()[
-    const{favoriteCards} = useFlash()
-]
+export default function StudyScreen(){
+    const{favoriteCards} = useFlash();
+
+    
+}
 
 
 const styles = StyleSheet.create({
