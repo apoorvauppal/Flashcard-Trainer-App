@@ -13,7 +13,7 @@ export type Deck = {
     cards: Card[];
 };
 
-type FvaoriteCardFlat = {deckId: string; deckTitle: string; card: Card}
+type FavoriteCardFlat = {deckId: string; deckTitle: string; card: Card}
 
 type FlashContextType = {
     decks: Deck[];
@@ -22,4 +22,6 @@ type FlashContextType = {
     addCardToDeck: (deckId: string, card: {question: string; answer: string}) => void;
     toggleFavorite: (deckId: string, cardId: string) => void
     favoriteCards: FavoriteCardFlat[];
+
+    const Flas
 }
