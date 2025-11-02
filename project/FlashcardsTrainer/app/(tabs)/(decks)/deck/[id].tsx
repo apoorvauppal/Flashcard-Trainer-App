@@ -1,11 +1,14 @@
 import { useRouter, useSearchParams } from "expo-router/build/hooks";
 import React from "react";
 import {StyleSheet} from "react-native";
+import { useFlash } from "../../../../src/contexts/FlashContext";
 
 export default function DeckDetail(){
     const{id} = useSearchParams();
     const router = useRouter();
-    const {getDeckById, toggleFavorite}
+    const {getDeckById, toggleFavorite} = useFlash();
+
+    const deck = getDeckById(String(id))
 }
 
 
