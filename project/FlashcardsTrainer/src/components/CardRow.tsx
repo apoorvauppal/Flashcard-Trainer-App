@@ -7,5 +7,7 @@ export default function CardRow({
 
 
 const styles = StyleSheet.create({
-    
+    row: { 
+        flexDirection
+    }
 })
