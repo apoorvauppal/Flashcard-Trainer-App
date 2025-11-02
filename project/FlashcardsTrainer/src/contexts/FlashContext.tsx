@@ -11,4 +11,6 @@ export type Deck = {
     id:string;
     title: string;
     cards: Card[];
-}
+};
+
+type FvaoriteCardFlat = {}
