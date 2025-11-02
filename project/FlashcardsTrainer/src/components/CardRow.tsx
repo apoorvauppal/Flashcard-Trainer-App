@@ -26,12 +26,12 @@ export default function CardRow({
 
                 {typeof onToggleFavorite === "function" && (
                     <TouchableOpacity onPress={onToggleFavorite} style = {styles.actionBtn}>
-                        <Text>{card.favorite ? "★" : ""}</Text>
+                        <Text>{card.favorite ? "★" : "☆"}</Text>
                     </TouchableOpacity>
                 )}
             </View>
         </View>
-    )
+    );
 }
 
 
