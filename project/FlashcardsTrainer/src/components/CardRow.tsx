@@ -28,5 +28,9 @@ const styles = StyleSheet.create({
     },
     actionBtn:{
         padding: 8,
+    },
+    deckTitle:{
+        fontSize: 12,
+        color: "#888",
     }
-})
+});
