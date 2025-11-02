@@ -13,7 +13,8 @@ export default function CardRow({
     const [showAnswer, setShowAnswer] = useState(false);
     return(
         <View style = {styles.row}>
-            <View> styl
+            <View style = {{ flex: 1}}>
+                {showDeckTitle }
 
             </View>
         </View>
