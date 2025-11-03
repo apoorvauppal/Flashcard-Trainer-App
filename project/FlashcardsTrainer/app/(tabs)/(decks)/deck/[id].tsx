@@ -49,7 +49,7 @@ export default function DeckDetail(){
 
      <FloatingButton
        onPress={() => {
-         router.push({ pathname: "/create-card", params: { deckId: deck.id } });
+         router.push({ pathname: "(modals)/create-card", params: { deckId: deck.id } });
        }}
      />
    </View>
