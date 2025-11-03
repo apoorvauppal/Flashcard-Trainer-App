@@ -34,8 +34,7 @@ export default function DecksScreen(){
          renderItem={({ item }) => (
            <DeckCard
              deck={item}
-             onPress={() => router.push({ pathname: `/ (tabs)/(decks)/deck/${item.id}`.replace(" ", "") })}
-           />
+onPress={() => router.push({ pathname: `/(tabs)/(decks)/deck/${item.id}` })}           />
          )}
        />
      )}
