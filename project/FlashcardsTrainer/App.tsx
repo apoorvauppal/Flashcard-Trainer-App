@@ -5,7 +5,6 @@ import { FlashProvider } from "./src/contexts/FlashContext";
 export default function App() {
   return (
     <FlashProvider>
-      {/* Slot is a placeholder where all your route content (tabs, modals, etc.) will render */}
       <Slot />
     </FlashProvider>
   );
