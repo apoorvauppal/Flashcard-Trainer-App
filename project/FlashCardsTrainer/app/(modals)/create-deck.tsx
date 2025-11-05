@@ -8,6 +8,6 @@ export default function CreateDeckModal(){
     const router = useRouter();
 
     const handleCreate = () => {
-        
+        if(!title.trim())
     }
 }
