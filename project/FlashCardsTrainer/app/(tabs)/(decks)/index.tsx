@@ -8,7 +8,7 @@ export default function DecksScreen(){
         justifyContent: "center",
         alignItems:"center"
         }}>
-            <Text></Text>
+            <Text style = {{fontSize:24}}>Decks List</Text>
         </View>
     )
 }
