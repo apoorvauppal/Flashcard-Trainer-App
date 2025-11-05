@@ -21,8 +21,10 @@ export default function CreateCardModal(){
     return(
         <View style={styles.container}>
             <Text style={styles.label}>New Deck Title</Text>
-            <TextInput>
-                
+            <TextInput 
+            style = {styles.input}
+            >
+
             </TextInput>
         </View>
     )
