@@ -9,9 +9,9 @@ export default function CreateCardModal(){
     const [answer, setAnswer] = useState("");
     const {addCardToDeck} = useContext(FlashContext);
     const router = useRouter();
-    const {deckId} = useSearchParams<{deckId: string}>();
+    const {deckId} = useLocalSearchParams<{deckId: string}>();
 
     const handleCreate = () => {
-        if(!question.trim())
+        if(!question.trim() || !answer.trim(), answer:)
     }
 }
