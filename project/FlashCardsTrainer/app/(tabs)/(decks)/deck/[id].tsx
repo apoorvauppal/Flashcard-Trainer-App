@@ -25,7 +25,9 @@ export default function DeckDetailScreen(){
             keyExtractor={(item) => item.id}
             renderItem = {({item}) => (
                 <View style={{
-                    padding
+                    padding:16, 
+                    marginBottom:8,
+                    backgroundColor: "#"
                 }}>
 
                 </View>
