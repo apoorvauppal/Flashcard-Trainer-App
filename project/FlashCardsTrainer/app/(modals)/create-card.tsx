@@ -11,5 +11,7 @@ export default function CreateCardModal(){
     const router = useRouter();
     const {deckId} = useSearchParams<{deckId: string}>();
 
-    const handleCreate = () =>
+    const handleCreate = () => {
+        if(!question.trim())
+    }
 }
