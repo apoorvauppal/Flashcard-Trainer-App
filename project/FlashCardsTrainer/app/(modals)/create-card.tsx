@@ -13,6 +13,7 @@ export default function CreateCardModal(){
 
     const handleCreate = () => {
         if(!question.trim() || !answer.trim() || !deckId) return;
-        addCardToDeck(deckId, {question: question.trim(), answer: answer})
+        addCardToDeck(deckId, {question: question.trim(), answer: answer.trim()});
+        router.back();
     }
 }
