@@ -7,4 +7,10 @@ type Card = {
     favorite?: boolean;
 };
 
-type Deck 
+type Deck = {
+    id: string;
+    title: string;
+    cards: Card[];
+};
+
+type
