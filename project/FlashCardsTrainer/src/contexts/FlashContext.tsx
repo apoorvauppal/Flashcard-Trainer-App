@@ -32,5 +32,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
         },
     });
 
-    const createDeck = 
+    const createDeck = (title: string) => {
+        const id = Math.random()
+    }
 }
