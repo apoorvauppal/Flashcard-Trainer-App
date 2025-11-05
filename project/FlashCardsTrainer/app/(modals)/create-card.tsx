@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import { FlashContext } from '../../src/contexts/FlashContext';
 import { useRouter } from 'expo-router';
 import { useLocalSearchParams } from 'expo-router/build/hooks';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 
 export default function CreateCardModal(){
@@ -19,7 +19,7 @@ export default function CreateCardModal(){
     };
 
     return(
-        <View style={StyleSheet.con}>
+        <View style={StyleSheet.container}>
 
         </View>
     )
