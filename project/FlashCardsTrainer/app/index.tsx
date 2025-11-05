@@ -7,6 +7,7 @@ export default function HomeScreen() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundCOlor
       }}
     >
       <Text style={{ fontSize: 24 }}>Flashcards Trainer 🧠</Text>
