@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, Button } from "react-native";
 import { FlashContext } from "../../../src/contexts/FlashContext";
 import { useRouter } from "expo-router";
 
@@ -9,6 +9,11 @@ export default function DecksScreen() {
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
+        <Button
+        
+        >
+
+        </Button>
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
 
       <FlatList
