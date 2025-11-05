@@ -27,7 +27,7 @@ export default function DecksScreen() {
               backgroundColor: "#f0f0f0",
               borderRadius: 8,
             }}
-            onPress={() router.push(`/(tabs)/`)}
+            onPress={() => router.push(`/(tabs)/(decks)/deck/${item.id}`)}
           >
             <Text style={{ fontSize: 18 }}>{item.title}</Text>
             <Text style={{ color: "gray" }}>{item.cards.length} cards</Text>
