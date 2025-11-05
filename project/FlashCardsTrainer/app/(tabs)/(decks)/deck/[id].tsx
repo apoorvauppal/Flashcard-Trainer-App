@@ -14,8 +14,10 @@ export default function DeckDetailScreen(){
 
     return(
         <View style={{flex:1, padding:16}}>
-            <Button>
-                
+            <Button
+                title="Add Card"
+            >
+
             </Button>
         </View>
     )
