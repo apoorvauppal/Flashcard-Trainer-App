@@ -2,11 +2,11 @@
 import React, { useContext } from "react";
 import { View, Text, FlatList, TouchableOpacity, SafeAreaView } from "react-native";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { useFlash } from "../../../../src/contexts/FlashContext";
+import { FlashContext } from "../../../../src/contexts/FlashContext";
 
 export default function DeckDetail() {
   const { id } = useLocalSearchParams();
-  const { decks } = useContext(useFlash);
+  const { decks } = useContext(FlashContext);
   const deck = decks?.[id as string];
   const router = useRouter();
 
