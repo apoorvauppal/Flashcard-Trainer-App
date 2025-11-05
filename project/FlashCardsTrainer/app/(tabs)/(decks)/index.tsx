@@ -6,8 +6,7 @@ export default function DecksScreen(){
     return(
         <View style = {{flex:1, 
         justifyContent: "center",
-        alignItems:"center"
-        }}>
+        alignItems:"center"}}>
             <Text style = {{fontSize:24}}>Decks List</Text>
         </View>
     )
