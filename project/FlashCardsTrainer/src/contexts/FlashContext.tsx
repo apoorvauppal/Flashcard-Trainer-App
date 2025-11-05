@@ -21,4 +21,6 @@ type FlashContextType = {
 export const FlashContext = createContext<FlashContextType>({
     decks: {},
     createDeck: () => {},
-})
+});
+
+export const FlashProvider: React.FC
