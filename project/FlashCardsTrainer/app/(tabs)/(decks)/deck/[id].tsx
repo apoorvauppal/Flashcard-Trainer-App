@@ -1,7 +1,7 @@
 import { useRouter, useSearchParams } from 'expo-router/build/hooks'
 import React, { useContext } from 'react'
 import { FlashContext } from '../../../../src/contexts/FlashContext';
-import {Text, View} from 'react-native'
+import {Text, View, Button} from 'react-native'
 
 
 export default function DeckDetailScreen(){
@@ -13,6 +13,10 @@ export default function DeckDetailScreen(){
     if(!deck) return <Text>Deck not Found</Text>
 
     return(
-        <View style={{flex:1, padding:16}}></View>
+        <View style={{flex:1, padding:16}}>
+            <Button>
+                
+            </Button>
+        </View>
     )
 }
