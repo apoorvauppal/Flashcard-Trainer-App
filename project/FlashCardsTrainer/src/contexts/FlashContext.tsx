@@ -38,6 +38,8 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
     };
     
     return(
-        <FlashContext
+        <FlashContext.Provider>
+            
+        </FlashContext.Provider>
     )
 }
