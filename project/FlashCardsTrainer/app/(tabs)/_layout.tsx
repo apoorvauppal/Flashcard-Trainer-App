@@ -5,6 +5,7 @@ export default function TabsLayout(){
     return(
         <Tabs>
             <Tabs.Screen name='(decks)' options={{title:"Decks", tabBarIcon: () => "🗂️"}}
+            />
             
         </Tabs>
     )
