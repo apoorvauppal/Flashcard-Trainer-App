@@ -13,6 +13,6 @@ export default function DeckDetailScreen(){
     if(!deck) return <Text>Deck not Found</Text>
 
     return(
-        <View></View>
+        <View style={{flex:1, padding:16}}></View>
     )
 }
