@@ -27,8 +27,11 @@ export default function DeckDetailScreen(){
                 <View style={{
                     padding:16, 
                     marginBottom:8,
-                    backgroundColor: "#"
-                }}>
+                    backgroundColor: "#f0f0f0",
+                    borderRadius:8,
+                }}
+                >
+                    <Text
 
                 </View>
             )}
