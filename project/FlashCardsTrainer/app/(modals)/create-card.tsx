@@ -2,5 +2,6 @@ import React, {useState} from 'react'
 
 
 export default function CreateCardModal(){
-    const [question, setQuestion]
+    const [question, setQuestion] = useState("");
+    const
 }
