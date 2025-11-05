@@ -11,10 +11,8 @@ export default function DecksScreen() {
     <View style={{ flex: 1, padding: 16 }}>
         <Button
         title="Create Deck"
-        onPress={() => router.push()}
-        >
-
-        </Button>
+        onPress={() => router.push("/(modals)/create-deck")}
+        />
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
 
       <FlatList
