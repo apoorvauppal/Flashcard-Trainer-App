@@ -1,11 +1,11 @@
-import { useRouter, useSearchParams } from 'expo-router/build/hooks'
+import { useRouter, useLocalSearchParams } from 'expo-router/build/hooks'
 import React, { useContext } from 'react'
 import { FlashContext } from '../../../../src/contexts/FlashContext';
 import {Text, View, Button, FlatList} from 'react-native'
 
 
 export default function DeckDetailScreen(){
-    const{deckId} = useSearchParams<{deckId: string}>();
+    const{deckId} = useLocalSearchParams<{deckId: string}>();
     const{decks} = useContext(FlashContext);
     const router = useRouter();
     const deck = deckId ? decks[deckId] : undefined;
