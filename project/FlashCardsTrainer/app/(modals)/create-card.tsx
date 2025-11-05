@@ -23,9 +23,12 @@ export default function CreateCardModal(){
             <Text style={styles.label}>New Deck Title</Text>
             <TextInput 
             style = {styles.input}
-            >
+            placeholder="Enter deck title"
+            value={title}
+            onChangeText={setTitle}
+            />
 
-            </TextInput>
+
         </View>
     )
 }
