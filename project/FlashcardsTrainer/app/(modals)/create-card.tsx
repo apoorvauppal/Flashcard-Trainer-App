@@ -1,74 +1,30 @@
-import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet, Text, Alert } from "react-native";
+// app/(modals)/create-card.tsx
+import React, { useContext, useState } from "react";
+import { SafeAreaView, Text, TextInput, TouchableOpacity } from "react-native";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { useFlash } from "../../src/contexts/FlashContext";
-
+import { FlashContext } from "../../src/contexts/FlashContext";
 
 export default function CreateCardModal() {
- const router = useRouter();
- const { deckId } = useLocalSearchParams();
- const { addCardToDeck, getDeckById } = useFlash();
- const deck = getDeckById(String(deckId));
+  const { deckId } = useLocalSearchParams();
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
+  const { addCardToDeck } = useContext(FlashContext);
+  const router = useRouter();
 
+  const submit = () => {
+    if (!question.trim() || !answer.trim()) return;
+    addCardToDeck(deckId as string, { question: question.trim(), answer: answer.trim() });
+    router.back();
+  };
 
- const [question, setQuestion] = useState("");
- const [answer, setAnswer] = useState("");
-
-
- if (!deck) {
-   return (
-     <View style={styles.container}>
-       <Text>Deck not found.</Text>
-       <Button title="Close" onPress={() => router.back()} />
-     </View>
-   );
- }
-
-
- const submit = () => {
-   if (!question.trim() || !answer.trim()) {
-     Alert.alert("Both question and answer are required");
-     return;
-   }
-   addCardToDeck(deck.id, { question: question.trim(), answer: answer.trim() });
-   router.back();
- };
-
-
- return (
-   <View style={styles.container}>
-     <Text style={styles.heading}>Add card to: {deck.title}</Text>
-
-
-     <Text style={styles.label}>Question</Text>
-     <TextInput
-       value={question}
-       onChangeText={setQuestion}
-       placeholder="Enter question"
-       style={styles.input}
-     />
-
-
-     <Text style={styles.label}>Answer</Text>
-     <TextInput
-       value={answer}
-       onChangeText={setAnswer}
-       placeholder="Enter answer"
-       style={styles.input}
-     />
-
-
-     <Button title="Add Card" onPress={submit} />
-     <View style={{ height: 12 }} />
-     <Button title="Cancel" onPress={() => router.back()} />
-   </View>
- );
+  return (
+    <SafeAreaView style={{ flex:1, padding: 16 }}>
+      <Text style={{ fontSize: 20 }}>New Card</Text>
+      <TextInput placeholder="Question" value={question} onChangeText={setQuestion} style={{ borderWidth:1, padding:8, marginTop:8, borderRadius:6 }} />
+      <TextInput placeholder="Answer" value={answer} onChangeText={setAnswer} style={{ borderWidth:1, padding:8, marginTop:8, borderRadius:6 }} />
+      <TouchableOpacity onPress={submit} style={{ marginTop:12, backgroundColor:"#007AFF", padding:12, borderRadius:8 }}>
+        <Text style={{ color:"white" }}>Add Card</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
 }
-
-
-const styles = StyleSheet.create({
- container: { flex: 1, padding: 18, justifyContent: "center" },
- heading: { fontSize: 18, fontWeight: "700", marginBottom: 12 },
- input: { borderWidth: 1, borderColor: "#ccc", padding: 10, borderRadius: 8, marginBottom: 12 },
- label: { fontWeight: "600", marginBottom: 4 },
-});

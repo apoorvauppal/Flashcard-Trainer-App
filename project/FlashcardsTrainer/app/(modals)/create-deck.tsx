@@ -1,41 +1,27 @@
-import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet, Text } from "react-native";
+// app/(modals)/create-deck.tsx
+import React, { useContext, useState } from "react";
+import { SafeAreaView, View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { useFlash } from "../../src/contexts/FlashContext";
-
+import { FlashContext } from "../../src/contexts/FlashContext";
 
 export default function CreateDeckModal() {
- const [title, setTitle] = useState("");
- const router = useRouter();
- const { addDeck } = useFlash();
+  const [title, setTitle] = useState("");
+  const { createDeck } = useContext(FlashContext);
+  const router = useRouter();
 
+  const onSubmit = () => {
+    if (!title.trim()) return;
+    createDeck(title.trim());
+    router.back();
+  };
 
- const submit = () => {
-   if (!title.trim()) return;
-   addDeck(title.trim());
-   router.back();
- };
-
-
- return (
-   <View style={styles.container}>
-     <Text style={styles.label}>Deck title</Text>
-     <TextInput
-       placeholder="e.g. French verbs"
-       value={title}
-       onChangeText={setTitle}
-       style={styles.input}
-     />
-     <Button title="Create deck" onPress={submit} />
-     <View style={{ height: 12 }} />
-     <Button title="Cancel" onPress={() => router.back()} />
-   </View>
- );
+  return (
+    <SafeAreaView style={{ flex:1, padding: 16 }}>
+      <Text style={{ fontSize: 20, marginBottom: 8 }}>New Deck</Text>
+      <TextInput value={title} onChangeText={setTitle} placeholder="Deck title" style={{ borderWidth:1, padding:8, borderRadius:6 }} />
+      <TouchableOpacity onPress={onSubmit} style={{ marginTop:12, backgroundColor:"#007AFF", padding:12, borderRadius:8 }}>
+        <Text style={{ color:"white" }}>Create</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
 }
-
-
-const styles = StyleSheet.create({
- container: { flex: 1, padding: 18, justifyContent: "center" },
- input: { borderWidth: 1, borderColor: "#ccc", padding: 10, borderRadius: 8, marginBottom: 12 },
- label: { marginBottom: 6, fontWeight: "600" },
-});
