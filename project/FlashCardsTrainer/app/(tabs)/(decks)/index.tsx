@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../src/contexts/FlashContext";
+import { useRouter } from "expo-router";
 
 export default function DecksScreen() {
   const { decks } = useContext(FlashContext);
+  const router = useRouter();
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
