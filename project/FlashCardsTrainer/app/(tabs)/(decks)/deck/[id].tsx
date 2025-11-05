@@ -31,7 +31,7 @@ export default function DeckDetailScreen(){
                     borderRadius:8,
                 }}
                 >
-                    <Text
+                    <Text style={{fontSize: 16}}>{item.question}</Text>
 
                 </View>
             )}
