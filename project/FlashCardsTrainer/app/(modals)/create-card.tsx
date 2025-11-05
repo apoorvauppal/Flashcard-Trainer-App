@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     label:{
         fontSize:18,
         marginBottom: 8,
+        textAlign:"center",
     },
     input:{
         borderWidth:1,
