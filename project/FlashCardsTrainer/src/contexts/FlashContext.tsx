@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
 type Card = {
     id: string;
@@ -17,3 +17,7 @@ type FlashContextType = {
     decks: Record<string, Deck>;
     createDeck: (title: string) => void;
 };
+
+export const FlashContext = createContext<FlashContextType>({
+    decks: {},
+})
