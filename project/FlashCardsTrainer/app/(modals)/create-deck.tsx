@@ -20,5 +20,5 @@ export default function CreateDeckModal(){
 }
 
 const styles = StyleSheet.create({
-
+    
 })
