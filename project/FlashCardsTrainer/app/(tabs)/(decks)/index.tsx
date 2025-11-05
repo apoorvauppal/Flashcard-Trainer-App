@@ -20,6 +20,7 @@ export default function DecksScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
+          key={item.id}
             style={{
               padding: 16,
               marginBottom: 8,
