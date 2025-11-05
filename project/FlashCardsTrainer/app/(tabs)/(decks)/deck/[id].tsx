@@ -20,8 +20,10 @@ export default function DeckDetailScreen(){
             />
             <Text style={{fontSize:14, marginVertical:16}}>{deck.title}</Text>
 
-            <FlatList>
-                
+            <FlatList 
+            data={deck.cards}
+            >
+
             </FlatList>
 
         </View>
