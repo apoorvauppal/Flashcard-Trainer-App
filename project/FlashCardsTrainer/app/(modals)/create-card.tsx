@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { FlashContext } from '../../src/contexts/FlashContext';
 
 
 export default function CreateCardModal(){
