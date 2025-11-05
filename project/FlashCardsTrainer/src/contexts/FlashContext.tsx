@@ -35,5 +35,9 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
     const createDeck = (title: string) => {
         const id = Math.random().toString(36).substring(2, 9);
         setDecks((d) => ({ ...d, [id]: {id, title, cards: []}}));
-    }
+    };
+    
+    return(
+        <FlashContext
+    )
 }
