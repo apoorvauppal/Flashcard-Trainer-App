@@ -36,6 +36,18 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
         const id = Math.random().toString(36).substring(2, 9);
         setDecks((d) => ({ ...d, [id]: {id, title, cards: []}}));
     };
+
+    const addCardToDeck = (deckId: string, card: { question: string; answer: string }) => {
+    const newCard = { id: Math.random().toString(36).substring(2, 9), ...card, favorite: false };
+    setDecks((d) => {
+      const deck = d[deckId];
+      if (!deck) return d;
+      return {
+        ...d,
+        [deckId]: { ...deck, cards: [...deck.cards, newCard] },
+      };
+    });
+  };
     
     return(
         <FlashContext.Provider value = {{ decks, createDeck}}>
