@@ -6,7 +6,10 @@ export default function StudyScreen(){
     return(
         <View style={{flex:1,
             justifyContent: "center",
-            
-        }}></View>
+            alignItems: "center"}}>
+
+                <Text></Text>
+
+        </View>
     )
 }
