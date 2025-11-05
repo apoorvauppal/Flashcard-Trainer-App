@@ -1,54 +1,27 @@
-import React from "react";
-import {StyleSheet, View, Text, FlatList} from "react-native";
-import { useFlash } from "../../../src/contexts/FlashContext";
-import CardRow from "../../../src/components/CardRow";
+// app/(tabs)/(study)/index.tsx
+import React, { useContext } from "react";
+import { SafeAreaView, Text, FlatList, View } from "react-native";
+import { FlashContext } from "../../../src/contexts/FlashContext";
 
+export default function StudyScreen() {
+  const { getFavorites } = useContext(FlashContext);
+  const favorites = getFavorites();
 
-export default function StudyScreen(){
-   const{favoriteCards} = useFlash();
-
-
-   return (
-   <View style={styles.container}>
-     <Text style={styles.header}>Favorites</Text>
-
-
-     {favoriteCards.length === 0 ? (
-       <View style={styles.empty}>
-         <Text>No favorite cards yet — mark cards as favorite to see them here.</Text>
-       </View>
-     ) : (
-       <FlatList
-         data={favoriteCards}
-         keyExtractor={(c) => `${c.card.id}-${c.deckId}`}
-         renderItem={({ item }) => (
-           <CardRow card={item.card} deckTitle={item.deckTitle} showDeckTitle />
-         )}
-       />
-     )}
-   </View>
- );
+  return (
+    <SafeAreaView style={{ flex: 1, padding: 16 }}>
+      <Text style={{ fontSize: 24, fontWeight: "700", marginBottom: 12 }}>Study - Favorites</Text>
+      <FlatList
+        data={favorites}
+        keyExtractor={(f: any) => f.id}
+        renderItem={({ item }: any) => (
+          <View style={{ padding: 12, borderWidth: 1, borderRadius: 8, marginBottom: 8 }}>
+            <Text style={{ fontWeight: "600" }}>{item.question}</Text>
+            <Text style={{ color: "#555" }}>{item.answer}</Text>
+            <Text style={{ color: "#007AFF", marginTop: 6 }}>Deck: {item.deckTitle}</Text>
+          </View>
+        )}
+        ListEmptyComponent={<Text>No favorite cards yet.</Text>}
+      />
+    </SafeAreaView>
+  );
 }
-
-
-
-
-
-
-const styles = StyleSheet.create({
-   container:{
-       flex:1,
-       padding:12,
-   },
-   header:{
-       fontSize:20,
-       fontWeight:"700",
-       marginBottom:8,
-   },
-   empty:{
-       flex:1,
-       alignItems: "center",
-       justifyContent:"center",
-       marginTop: 24,
-   }
-})
