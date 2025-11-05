@@ -13,4 +13,7 @@ type Deck = {
     cards: Card[];
 };
 
-type
+type FlashContextType = {
+    decks: Record<string, Deck>;
+    
+}
