@@ -10,7 +10,7 @@ export default function HomeScreen() {
         backgroundColor: "#fff",
       }}
     >
-      <Text style={{ fontSize: 24 }}>Flashcards Trainer 🧠</Text>
+      <Text style={{ fontSize: 24 }}>Flashcards Trainer</Text>
       <Text>Expo Router is working!</Text>
     </View>
   );
