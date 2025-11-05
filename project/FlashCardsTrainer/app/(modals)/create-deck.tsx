@@ -25,5 +25,8 @@ const styles = StyleSheet.create({
         padding:16,
         justifyContent:"center",
         backgroundColor:"#fff",
+    },
+    label:{
+        
     }
 })
