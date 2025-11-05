@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native/types_generated/index';
+import { View, Text } from 'react-native/types_generated/index';
 
 
 export default function DecksScreen(){
@@ -8,7 +8,7 @@ export default function DecksScreen(){
         justifyContent: "center",
         alignItems:"center"
         }}>
-            
+            <Text></Text>
         </View>
     )
 }
