@@ -9,5 +9,5 @@ export default function DecksScreen(){
         alignItems:"center"}}>
             <Text style = {{fontSize:24}}>Decks List</Text>
         </View>
-    )
+    );
 }

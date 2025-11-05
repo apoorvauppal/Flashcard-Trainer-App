@@ -8,8 +8,8 @@ export default function StudyScreen(){
             justifyContent: "center",
             alignItems: "center"}}>
 
-                <Text></Text>
+                <Text style={{fontSize:24}}> Study Favorites </Text>
 
         </View>
-    )
+    );
 }
