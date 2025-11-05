@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react' 
 import { FlashContext } from '../../src/contexts/FlashContext';
 import {useRouter} from 'expo-router'
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TextInput } from 'react-native';
 
 export default function CreateDeckModal(){
     const [title, setTitle] = useState("");
@@ -16,7 +16,10 @@ export default function CreateDeckModal(){
 
     return(
         <View style={styles.container}>
-            <Text style = {styles.label}></Text>
+            <Text style = {styles.label}> New Deck Title</Text>
+            <TextInput>
+                
+            </TextInput>
         </View>
     )
 }
