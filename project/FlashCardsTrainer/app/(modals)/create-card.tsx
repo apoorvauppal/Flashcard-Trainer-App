@@ -10,4 +10,6 @@ export default function CreateCardModal(){
     const {addCardToDeck} = useContext(FlashContext);
     const router = useRouter();
     const {deckId} = useSearchParams<{deckId: string}>();
+
+    const handleCreate = () =>
 }
