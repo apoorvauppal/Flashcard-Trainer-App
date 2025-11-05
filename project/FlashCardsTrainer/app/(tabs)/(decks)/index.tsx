@@ -10,7 +10,8 @@ export default function DecksScreen() {
   return (
     <View style={{ flex: 1, padding: 16 }}>
         <Button
-        
+        title="Create Deck"
+        onPress={() => router.push()}
         >
 
         </Button>
