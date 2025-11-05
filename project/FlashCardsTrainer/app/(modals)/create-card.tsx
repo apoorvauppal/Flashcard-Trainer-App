@@ -19,8 +19,8 @@ export default function CreateCardModal(){
     };
 
     return(
-        <View style={StyleSheet.container}>
-
+        <View style={styles.container}>
+            <Text></Text>
         </View>
     )
 }
