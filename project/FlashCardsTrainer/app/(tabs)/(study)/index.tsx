@@ -11,7 +11,7 @@ export default function StudyScreen() {
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-      <Text style={{ fontSize: 24, marginBottom: 16 }}>⭐ Study Favorites</Text>
+      <Text style={{ fontSize: 24, marginBottom: 16 }}> Study Favorites</Text>
 
       {favorites.length === 0 ? (
         <Text>No favorite cards yet.</Text>
