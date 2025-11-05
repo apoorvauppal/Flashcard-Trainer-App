@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import { FlashContext } from '../../src/contexts/FlashContext';
 import { useRouter } from 'expo-router';
 import { useLocalSearchParams } from 'expo-router/build/hooks';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TextInput } from 'react-native';
 
 
 export default function CreateCardModal(){
@@ -21,6 +21,9 @@ export default function CreateCardModal(){
     return(
         <View style={styles.container}>
             <Text style={styles.label}>New Deck Title</Text>
+            <TextInput>
+                
+            </TextInput>
         </View>
     )
 }
