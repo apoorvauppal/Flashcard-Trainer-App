@@ -15,7 +15,9 @@ export default function CreateDeckModal(){
     };
 
     return(
-        <View style ></View>
+        <View style={styles.container}>
+            <Text></Text>
+        </View>
     )
 }
 
