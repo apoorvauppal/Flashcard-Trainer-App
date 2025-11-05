@@ -50,7 +50,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
   };
     
     return(
-        <FlashContext.Provider value = {{ decks, createDeck}}>
+        <FlashContext.Provider value = {{ decks, createDeck, addCardToDeck}}>
             {children}
         </FlashContext.Provider>
     );
