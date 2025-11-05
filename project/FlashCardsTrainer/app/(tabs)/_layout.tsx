@@ -6,7 +6,7 @@ export default function TabsLayout(){
         <Tabs>
             <Tabs.Screen name='(decks)' options={{title:"Decks", tabBarIcon: () => "🗂️"}}
             />
-            <Tabs.Screen name="(study)" options
+            <Tabs.Screen name="(study)" options ={{ title: "Study", tabBarIcon: () => "⭐"}}
         </Tabs>
     )
 }
