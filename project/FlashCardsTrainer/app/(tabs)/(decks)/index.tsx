@@ -7,7 +7,7 @@ export default function DecksScreen() {
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-      <Text style={{ fontSize: 24, marginBottom: 16 }}>🗂️ Decks</Text>
+      <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
 
       <FlatList
         data={Object.values(decks)}
