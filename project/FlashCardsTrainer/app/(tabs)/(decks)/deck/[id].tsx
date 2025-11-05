@@ -18,8 +18,7 @@ export default function DeckDetailScreen(){
                 title="Add Card"
                 onPress={() => router.push(`/(modals)/create-card?deckId=$(deckId)`)}
             />
-            <Text style={{fontSize:14, marginVertical:16}}>
-            </Text>
+            <Text style={{fontSize:14, marginVertical:16}}>{deck.title}</Text>
 
         </View>
     )
