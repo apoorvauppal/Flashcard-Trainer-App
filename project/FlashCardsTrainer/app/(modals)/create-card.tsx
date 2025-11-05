@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react'
 import { FlashContext } from '../../src/contexts/FlashContext';
 import { useRouter } from 'expo-router';
-import { useSearchParams } from 'expo-router/build/hooks';
+import { useLocalSearchParams } from 'expo-router/build/hooks';
 
 
 export default function CreateCardModal(){
@@ -12,6 +12,6 @@ export default function CreateCardModal(){
     const {deckId} = useLocalSearchParams<{deckId: string}>();
 
     const handleCreate = () => {
-        if(!question.trim() || !answer.trim(), answer:)
+        if(!question.trim() || !answer.trim(), answer: answer.trim())
     }
 }
