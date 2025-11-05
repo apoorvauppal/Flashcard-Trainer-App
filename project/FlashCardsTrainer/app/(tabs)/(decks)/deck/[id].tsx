@@ -16,7 +16,7 @@ export default function DeckDetailScreen(){
         <View style={{flex:1, padding:16}}>
             <Button
                 title="Add Card"
-                onPress={() => router.push(`/(modals)`)}
+                onPress={() => router.push(`/(modals)/create-card?deckId=$`)}
             >
 
             </Button>
