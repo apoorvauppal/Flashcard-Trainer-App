@@ -1,4 +1,9 @@
 import React from 'react';
+import { View } from 'react-native';
 
 
-export defauly 
+export default function StudyScreen(){
+    return(
+        <View
+    )
+}
