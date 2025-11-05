@@ -12,6 +12,6 @@ export default function CreateCardModal(){
     const {deckId} = useLocalSearchParams<{deckId: string}>();
 
     const handleCreate = () => {
-        if(!question.trim() || !answer.trim(), answer: answer.trim())
+        if(!question.trim() || !answer.trim() || !deckId))
     }
 }
