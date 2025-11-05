@@ -24,8 +24,10 @@ export default function DeckDetailScreen(){
             data={deck.cards}
             keyExtractor={(item) => item.id}
             renderItem = {({item}) => (
-                <View>
-                    
+                <View style={{
+                    padding
+                }}>
+
                 </View>
             )}
             >
