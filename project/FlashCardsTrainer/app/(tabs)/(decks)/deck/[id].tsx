@@ -7,5 +7,7 @@ export default function DeckDetailScreen(){
     const{deckId} = useSearchParams<{deckId: string}>();
     const{decks} = useContext(FlashContext);
     const router = useRouter();
-    const deck = deckId ? decks[deckId]
+    const deck = deckId ? decks[deckId] : undefined;
+
+    if(!deck) return <Text></Text>
 }
