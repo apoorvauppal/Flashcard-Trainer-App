@@ -22,6 +22,7 @@ export default function DeckDetailScreen(){
 
             <FlatList 
             data={deck.cards}
+            keyExtractor={(item) => item.id}
             >
 
             </FlatList>
