@@ -1,6 +1,5 @@
 // src/contexts/FlashContext.tsx
 import React, { createContext, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 // types
 type Card = { id: string; question: string; answer: string; favorite?: boolean };
