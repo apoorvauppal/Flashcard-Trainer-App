@@ -1,104 +1,80 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+// src/contexts/FlashContext.tsx
+import React, { createContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-export type Card = {
-  id: string;
-  question: string;
-  answer: string;
-  favorite?: boolean;
-};
-
-export type Deck = {
-  id: string;
-  title: string;
-  cards: Card[];
-};
-
-type FavoriteCardFlat = { deckId: string; deckTitle: string; card: Card };
+// types
+type Card = { id: string; question: string; answer: string; favorite?: boolean };
+type Deck = { id: string; title: string; cards: Card[] };
 
 type FlashContextType = {
-  decks: Deck[];
-  addDeck: (title: string) => void;
-  getDeckById: (id: string) => Deck | undefined;
+  decks: Record<string, Deck>;
+  createDeck: (title: string) => void;
   addCardToDeck: (deckId: string, card: { question: string; answer: string }) => void;
   toggleFavorite: (deckId: string, cardId: string) => void;
-  favoriteCards: FavoriteCardFlat[];
+  getFavorites: () => Array<{ id: string; question: string; answer: string; deckId: string; deckTitle: string }>;
 };
 
-const FlashContext = createContext<FlashContextType | undefined>(undefined);
+export const FlashContext = createContext<FlashContextType>({
+  decks: {},
+  createDeck: () => {},
+  addCardToDeck: () => {},
+  toggleFavorite: () => {},
+  getFavorites: () => [],
+});
 
-function generateId(prefix = "") {
-  return `${prefix}${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
-}
+export const FlashProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [decks, setDecks] = useState<Record<string, Deck>>({
+    // example deck
+    "sample-deck": {
+      id: "sample-deck",
+      title: "Sample Deck",
+      cards: [
+        { id: uuidv4(), question: "What is 2+2?", answer: "4", favorite: false },
+      ],
+    },
+  });
 
-const initial: Deck[] = [
-  {
-    id: "deck-1",
-    title: "Sample Deck",
-    cards: [
-      { id: "c1", question: "What is React?", answer: "A JS library for UIs", favorite: false },
-      { id: "c2", question: "What is Expo?", answer: "A platform for React Native", favorite: true },
-    ],
-  },
-];
-
-interface FlashProviderProps {
-  children: React.ReactNode;
-}
-
-export const FlashProvider: React.FC<FlashProviderProps> = ({ children }) => {
-  const [decks, setDecks] = useState<Deck[]>(initial);
-
-  const addDeck = (title: string) => {
-    const newDeck: Deck = { id: generateId("deck-"), title, cards: [] };
-    setDecks((d) => [newDeck, ...d]);
+  const createDeck = (title: string) => {
+    const id = uuidv4();
+    setDecks((d) => ({ ...d, [id]: { id, title, cards: [] } }));
   };
 
-  const getDeckById = (id: string) => decks.find((d) => d.id === id);
-
   const addCardToDeck = (deckId: string, card: { question: string; answer: string }) => {
-    setDecks((prev) =>
-      prev.map((d) =>
-        d.id === deckId
-          ? {
-              ...d,
-              cards: [
-                ...d.cards,
-                { id: generateId("card-"), question: card.question, answer: card.answer, favorite: false },
-              ],
-            }
-          : d
-      )
-    );
+    const newCard: Card = { id: uuidv4(), ...card, favorite: false };
+    setDecks((d) => {
+      const deck = d[deckId];
+      if (!deck) return d;
+      return { ...d, [deckId]: { ...deck, cards: [...deck.cards, newCard] } };
+    });
   };
 
   const toggleFavorite = (deckId: string, cardId: string) => {
-    setDecks((prev) =>
-      prev.map((d) =>
-        d.id === deckId
-          ? {
-              ...d,
-              cards: d.cards.map((c) => (c.id === cardId ? { ...c, favorite: !c.favorite } : c)),
-            }
-          : d
-      )
-    );
+    setDecks((d) => {
+      const deck = d[deckId];
+      if (!deck) return d;
+      return {
+        ...d,
+        [deckId]: {
+          ...deck,
+          cards: deck.cards.map((c) => (c.id === cardId ? { ...c, favorite: !c.favorite } : c)),
+        },
+      };
+    });
   };
 
-  const favoriteCards: FavoriteCardFlat[] = decks.flatMap((d) =>
-    d.cards.filter((c) => c.favorite).map((c) => ({ deckId: d.id, deckTitle: d.title, card: c }))
-  );
+  const getFavorites = () => {
+    const favs: any[] = [];
+    Object.values(decks).forEach((deck) =>
+      deck.cards.forEach((c) => {
+        if (c.favorite) favs.push({ id: c.id, question: c.question, answer: c.answer, deckId: deck.id, deckTitle: deck.title });
+      })
+    );
+    return favs;
+  };
 
   return (
-    <FlashContext.Provider
-      value={{ decks, addDeck, getDeckById, addCardToDeck, toggleFavorite, favoriteCards }}
-    >
+    <FlashContext.Provider value={{ decks, createDeck, addCardToDeck, toggleFavorite, getFavorites }}>
       {children}
     </FlashContext.Provider>
   );
-};
-
-export const useFlash = () => {
-  const ctx = useContext(FlashContext);
-  if (!ctx) throw new Error("useFlash must be used within FlashProvider");
-  return ctx;
 };
