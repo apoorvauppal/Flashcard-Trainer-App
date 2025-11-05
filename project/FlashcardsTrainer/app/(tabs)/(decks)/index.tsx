@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import { View, Text, FlatList, TouchableOpacity, SafeAreaView } from "react-native";
 import { Link, useRouter } from "expo-router";
-import { FlashContext } from "../../../src/contexts/FlashContext.tsx";
+import { FlashContext } from "../../../src/contexts/FlashContext";
 
 export default function DecksScreen() {
   const { decks } = useContext(FlashContext);
