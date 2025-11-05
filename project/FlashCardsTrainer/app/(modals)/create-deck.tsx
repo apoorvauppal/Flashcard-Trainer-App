@@ -23,7 +23,7 @@ export default function CreateDeckModal(){
                 value = {title}
                 onChangeText={setTitle}
             />
-            <Button></Button>
+            <Button title="Create Deck" onPress={handleCreate}></Button>
             
             </TextInput>
         </View>
