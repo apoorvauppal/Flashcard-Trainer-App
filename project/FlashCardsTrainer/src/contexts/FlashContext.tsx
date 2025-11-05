@@ -15,5 +15,5 @@ type Deck = {
 
 type FlashContextType = {
     decks: Record<string, Deck>;
-    
-}
+    createDeck: (title: string) => void;
+};
