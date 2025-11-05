@@ -23,4 +23,6 @@ export const FlashContext = createContext<FlashContextType>({
     createDeck: () => {},
 });
 
-export const FlashProvider: React.FC<{children: React.ReactNode}
+export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+    
+}
