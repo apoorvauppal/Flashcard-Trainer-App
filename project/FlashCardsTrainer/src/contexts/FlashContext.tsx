@@ -27,7 +27,8 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
     const [decks, setDecks] = useState<Record<String, Deck>({
         'sample-deck': {
             id: 'sample-deck',
-            
-        }
+            title: 'Sample Deck',
+            cards: [],
+        },
     })
 }
