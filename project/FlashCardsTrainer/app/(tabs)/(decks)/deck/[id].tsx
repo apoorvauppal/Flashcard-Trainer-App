@@ -1,6 +1,8 @@
+import { useSearchParams } from 'expo-router/build/hooks'
 import React from 'react'
 
 
 export default function DeckDetailScreen(){
-    e
+    const{deckId} = useSearchParams<{deckId: string}>();
+    
 }
