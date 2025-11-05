@@ -1,7 +1,7 @@
 import { useRouter, useSearchParams } from 'expo-router/build/hooks'
 import React, { useContext } from 'react'
 import { FlashContext } from '../../../../src/contexts/FlashContext';
-import {Text, View, Button} from 'react-native'
+import {Text, View, Button, FlatList} from 'react-native'
 
 
 export default function DeckDetailScreen(){
@@ -19,6 +19,10 @@ export default function DeckDetailScreen(){
                 onPress={() => router.push(`/(modals)/create-card?deckId=$(deckId)`)}
             />
             <Text style={{fontSize:14, marginVertical:16}}>{deck.title}</Text>
+
+            <FlatList>
+                
+            </FlatList>
 
         </View>
     )
