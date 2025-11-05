@@ -16,6 +16,7 @@ type Deck = {
 type FlashContextType = {
     decks: Record<string, Deck>;
     createDeck: (title: string) => void;
+    addCardToDeck: (deckId: string, card:{question:string; answer: string})
 };
 
 export const FlashContext = createContext<FlashContextType>({
