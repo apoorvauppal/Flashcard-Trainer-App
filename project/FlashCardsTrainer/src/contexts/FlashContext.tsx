@@ -30,5 +30,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
             title: 'Sample Deck',
             cards: [],
         },
-    })
+    });
+
+    const createDeck = 
 }
