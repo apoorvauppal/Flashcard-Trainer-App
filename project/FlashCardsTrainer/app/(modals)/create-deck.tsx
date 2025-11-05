@@ -15,6 +15,10 @@ export default function CreateDeckModal(){
     };
 
     return(
-        <View></View>
+        <View style ></View>
     )
 }
+
+const styles = StyleSheet.create({
+    
+})
