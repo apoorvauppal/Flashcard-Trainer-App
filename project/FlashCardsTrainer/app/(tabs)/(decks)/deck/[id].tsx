@@ -32,13 +32,11 @@ export default function DeckDetailScreen(){
                 }}
                 >
                     <Text style={{fontSize: 16}}>{item.question}</Text>
+                    <Text style={{fontSize: 16}}>{item.answer}</Text>
 
                 </View>
             )}
-            >
-
-            </FlatList>
-
+            />
         </View>
     )
 }
