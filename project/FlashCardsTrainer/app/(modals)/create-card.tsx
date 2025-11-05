@@ -26,3 +26,6 @@ export default function CreateCardModal(){
 }
 
 
+const styles = StyleSheet.create({
+    
+})
