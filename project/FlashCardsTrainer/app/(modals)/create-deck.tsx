@@ -23,11 +23,9 @@ export default function CreateDeckModal(){
                 value = {title}
                 onChangeText={setTitle}
             />
-            <Button title="Create Deck" onPress={handleCreate}></Button>
-            
-            </TextInput>
+            <Button title="Create Deck" onPress={handleCreate}/>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
