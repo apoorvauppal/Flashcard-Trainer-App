@@ -24,5 +24,5 @@ export const FlashContext = createContext<FlashContextType>({
 });
 
 export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-    
+    const [decks, setDecks] = useState<Record<String, Deck>
 }
