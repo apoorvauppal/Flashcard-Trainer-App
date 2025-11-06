@@ -1,51 +1,24 @@
 import { useContext } from "react";
-import { View, Text, FlatList, TouchableOpacity, Button } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../src/contexts/FlashContext";
 import { useRouter } from "expo-router";
 
 export default function DecksScreen() {
-  const { decks, createDeck, getFavorites } = useContext(FlashContext);
+  const { decks } = useContext(FlashContext);
   const router = useRouter();
-
-  const favorites = getFavorites();
-  const deckList = Object.values(decks);
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-        <Button
-        title="Create Deck"
-        onPress={() => router.push("/(modals)/create-deck")}
-        />
-
-        {favorites.length > 0 && (
-          <>
-            <Text style = {{fontSize:20, marginTop:20, marginBottom:10}}>Favorite Cards</Text>
-            <FlatList data={favorites} keyExtractor={(item) => item.id}
-            renderItem={({item}) => (
-              <View style={{padding:12, backgroundColor: '#ffe9b3', borderRadius:8, marginBottom:8,}}>
-                <Text style = {{fontWeight:"bold"}}>{item.question}</Text>
-                <Text>{item.answer}</Text>
-                <Text style={{ fontSize: 12, color: "gray" }}>
-                  Deck: {item.deckTitle}
-                </Text>
-              </View>
-            )}
-              />
-            </>
-        )}
-      <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
-
       <FlatList
         data={Object.values(decks)}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
-          key={item.id}
             style={{
               padding: 16,
-              marginBottom: 8,
               backgroundColor: "#f0f0f0",
               borderRadius: 8,
+              marginBottom: 8,
             }}
             onPress={() => router.push(`/(tabs)/(decks)/deck/${item.id}`)}
           >
@@ -54,6 +27,29 @@ export default function DecksScreen() {
           </TouchableOpacity>
         )}
       />
+
+      {/* Floating Action Button */}
+      <TouchableOpacity
+        onPress={() => router.push("/(modals)/create-deck")}
+        style={{
+          position: "absolute",
+          bottom: 30,
+          right: 30,
+          backgroundColor: "#007AFF",
+          width: 60,
+          height: 60,
+          borderRadius: 30,
+          justifyContent: "center",
+          alignItems: "center",
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.3,
+          shadowRadius: 3,
+          elevation: 5,
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 32, lineHeight: 32 }}>+</Text>
+      </TouchableOpacity>
     </View>
   );
 }
