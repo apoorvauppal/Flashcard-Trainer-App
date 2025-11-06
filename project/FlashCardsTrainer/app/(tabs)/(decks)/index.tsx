@@ -1,52 +1,41 @@
 import { useContext, useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, TextInput } from "react-native";
-import { FlashContext } from "../../../src/contexts/FlashContext";
+import { View, FlatList, TouchableOpacity, Text } from "react-native";
 import { useRouter } from "expo-router";
+import { FlashContext } from "../../../src/contexts/FlashContext";
+import DeckCard from "../../../src/components/DeckCard";
+import SearchBar from "../../../src/components/SearchBar";
 
 export default function DecksScreen() {
   const { decks } = useContext(FlashContext);
   const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState("");
+  const [search, setSearch] = useState("");
 
-  const filteredDecks = Object.values(decks).filter((deck) =>
-    deck.title.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredDecks = Object.values(decks).filter((d) =>
+    d.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-      <TextInput
-        placeholder="Search decks..."
-        value={searchQuery}
-        onChangeText={setSearchQuery}
-        style={{
-          padding: 12,
-          borderWidth: 1,
-          borderColor: "#ccc",
-          borderRadius: 8,
-          marginBottom: 16,
-          fontSize: 16,
-        }}
-      />
+      <SearchBar value={search} onChange={setSearch} placeholder="Search decks..." />
+
       <FlatList
-        data={Object.values(decks)}
+        data={filteredDecks}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={{
-              padding: 16,
-              backgroundColor: "#f0f0f0",
-              borderRadius: 8,
-              marginBottom: 8,
-            }}
+          <DeckCard
+            title={item.title}
+            count={item.cards.length}
             onPress={() => router.push(`/(tabs)/(decks)/deck/${item.id}`)}
-          >
-            <Text style={{ fontSize: 18 }}>{item.title}</Text>
-            <Text style={{ color: "gray" }}>{item.cards.length} cards</Text>
-          </TouchableOpacity>
+          />
         )}
+        ListEmptyComponent={
+          <Text style={{ textAlign: "center", color: "gray", marginTop: 20 }}>
+            {search ? "No decks found." : "No decks yet. Add one!"}
+          </Text>
+        }
       />
 
-      {/* Floating Action Button */}
+      {/* ➕ Floating Action Button */}
       <TouchableOpacity
         onPress={() => router.push("/(modals)/create-deck")}
         style={{
@@ -59,11 +48,6 @@ export default function DecksScreen() {
           borderRadius: 30,
           justifyContent: "center",
           alignItems: "center",
-          shadowColor: "#000",
-          shadowOffset: { width: 0, height: 2 },
-          shadowOpacity: 0.3,
-          shadowRadius: 3,
-          elevation: 5,
         }}
       >
         <Text style={{ color: "white", fontSize: 32, lineHeight: 32 }}>+</Text>
