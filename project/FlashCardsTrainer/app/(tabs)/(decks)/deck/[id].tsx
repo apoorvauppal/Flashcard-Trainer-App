@@ -41,9 +41,9 @@ export default function DeckDetailScreen() {
           </View>
           <Text style={{fontSize:20}}
           onPress={() => toggleFavorite(deck.id, item.id)}
-          >
+          
             {item.favorite ? "❤️" : "🤍"}
-          </Text>
+          </>
           <View>
         )}
       />
