@@ -4,7 +4,7 @@ import { FlashContext } from "../../../src/contexts/FlashContext";
 import { useRouter } from "expo-router";
 
 export default function DecksScreen() {
-  const { decks, create } = useContext(FlashContext);
+  const { decks, createDeck, getFavorites } = useContext(FlashContext);
   const router = useRouter();
 
   const favorites = getFa
