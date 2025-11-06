@@ -48,6 +48,6 @@ export default function DeckDetailScreen() {
             </Text>
         </View>
         )}
-
+    }
   );
 }
