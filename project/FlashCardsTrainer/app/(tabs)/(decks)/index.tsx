@@ -19,6 +19,9 @@ export default function DecksScreen() {
 
         {favorites.length > 0 && (
           <>
+            <Text>
+              
+            </Text>
           </>
         )}
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
