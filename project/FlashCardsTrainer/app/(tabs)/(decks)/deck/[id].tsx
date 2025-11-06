@@ -1,42 +1,43 @@
-import { useRouter, useLocalSearchParams } from 'expo-router/build/hooks'
-import React, { useContext } from 'react'
-import { FlashContext } from '../../../../src/contexts/FlashContext';
-import {Text, View, Button, FlatList} from 'react-native'
+import { useContext } from "react";
+import { View, Text, FlatList, Button } from "react-native";
+import { FlashContext } from "../../../../src/contexts/FlashContext";
+import { useRouter, useLocalSearchParams } from "expo-router";
 
+export default function DeckDetailScreen() {
+  const { id } = useLocalSearchParams<{ id: string }>(); // <-- get [id] param
+  const { decks } = useContext(FlashContext);
+  const router = useRouter();
 
-export default function DeckDetailScreen(){
-    const{deckId} = useLocalSearchParams<{deckId: string}>();
-    const{decks} = useContext(FlashContext);
-    const router = useRouter();
-    const deck = deckId ? decks[deckId] : undefined;
+  const deck = id ? decks[id] : undefined;
 
-    if(!deck) return <Text>Deck not Found</Text>
+  if (!deck) return <Text>Deck not found</Text>;
 
-    return(
-        <View style={{flex:1, padding:16}}>
-            <Button
-                title="Add Card"
-                onPress={() => router.push(`/(modals)/create-card?deckId=$(deckId)`)}
-            />
-            <Text style={{fontSize:14, marginVertical:16}}>{deck.title}</Text>
+  return (
+    <View style={{ flex: 1, padding: 16 }}>
+      <Button
+        title="➕ Add Card"
+        onPress={() => router.push(`/(modals)/create-card?deckId=${deck.id}`)}
+      />
 
-            <FlatList 
-            data={deck.cards}
-            keyExtractor={(item) => item.id}
-            renderItem = {({item}) => (
-                <View style={{
-                    padding:16, 
-                    marginBottom:8,
-                    backgroundColor: "#f0f0f0",
-                    borderRadius:8,
-                }}
-                >
-                    <Text style={{fontSize: 16}}>{item.question}</Text>
-                    <Text style={{fontSize: 16}}>{item.answer}</Text>
+      <Text style={{ fontSize: 24, marginVertical: 16 }}>{deck.title}</Text>
 
-                </View>
-            )}
-            />
-        </View>
-    );
+      <FlatList
+        data={deck.cards}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View
+            style={{
+              padding: 16,
+              marginBottom: 8,
+              backgroundColor: "#f0f0f0",
+              borderRadius: 8,
+            }}
+          >
+            <Text style={{ fontSize: 16 }}>{item.question}</Text>
+            <Text style={{ color: "gray" }}>{item.answer}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
 }
