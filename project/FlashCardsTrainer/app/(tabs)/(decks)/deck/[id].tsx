@@ -39,11 +39,6 @@ export default function DeckDetailScreen() {
             <Text style={{ fontSize: 16 }}>{item.question}</Text>
             <Text style={{ color: "gray" }}>{item.answer}</Text>
           </View>
-          <Text style={{fontSize:20}}
-          onPress={() => toggleFavorite}
-          >
-
-          </Text>
         )}
       />
     </View>
