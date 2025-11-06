@@ -8,7 +8,9 @@ export default function DecksScreen() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredDecks = Object.values(decks).filter((deck))
+  const filteredDecks = Object.values(decks).filter((deck) =>
+  deck.title.toLow
+)
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
