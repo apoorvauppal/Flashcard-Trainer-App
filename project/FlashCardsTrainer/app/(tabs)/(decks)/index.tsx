@@ -19,7 +19,7 @@ export default function DecksScreen() {
 
         {favorites.length > 0 && (
           <>
-            <Text style>
+            <Text style = {{fontSize:20, marginTop}}>
 
             </Text>
           </>
