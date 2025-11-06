@@ -19,17 +19,19 @@ export default function DeckDetailScreen() {
         data={deck.cards}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View
-            style={{
-              padding: 16,
-              marginBottom: 8,
-              backgroundColor: "#f0f0f0",
-              borderRadius: 8,
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <CardRow
+            question={item.question}
+            answer={item.answer}
+            favorite={item.favorite ?? false}
+            onToggleFavorite={() => toggleFavorite(deck.id, item.id)}
+          />
+        )}
+        ListEmptyComponent={
+          <Text style={{ textAlign: "center", color: "gray", marginTop: 20 }}>
+            No cards yet. Add one to get started!
+          </Text>
+        }
+      />
             <View>
               <Text style={{ fontSize: 16 }}>{item.question}</Text>
               <Text style={{ color: "gray" }}>{item.answer}</Text>
