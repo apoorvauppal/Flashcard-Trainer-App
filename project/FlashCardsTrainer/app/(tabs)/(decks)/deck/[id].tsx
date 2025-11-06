@@ -32,7 +32,7 @@ export default function DeckDetailScreen() {
               backgroundColor: "#f0f0f0",
               borderRadius: 8,
               flexDirection:"row",
-              justifyContent
+              justifyContent:"space-between"
             }}
           >
             <Text style={{ fontSize: 16 }}>{item.question}</Text>
