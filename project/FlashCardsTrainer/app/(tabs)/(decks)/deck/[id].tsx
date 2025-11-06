@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import CardRow from "../../../../src/components/CardRow";
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -20,19 +19,17 @@ export default function DeckDetailScreen() {
         data={deck.cards}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <CardRow
-            question={item.question}
-            answer={item.answer}
-            favorite={item.favorite ?? false}
-            onToggleFavorite={() => toggleFavorite(deck.id, item.id)}
-          />
-        )}
-        ListEmptyComponent={
-          <Text style={{ textAlign: "center", color: "gray", marginTop: 20 }}>
-            No cards yet. Add one to get started!
-          </Text>
-        }
-      />
+          <View
+            style={{
+              padding: 16,
+              marginBottom: 8,
+              backgroundColor: "#f0f0f0",
+              borderRadius: 8,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
             <View>
               <Text style={{ fontSize: 16 }}>{item.question}</Text>
               <Text style={{ color: "gray" }}>{item.answer}</Text>
