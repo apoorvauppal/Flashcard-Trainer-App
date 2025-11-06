@@ -1,5 +1,3 @@
-
-
 import { Stack } from "expo-router";
 import { FlashProvider } from "../src/contexts/FlashContext";
 
