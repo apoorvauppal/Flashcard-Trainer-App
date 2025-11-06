@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { View, Text, FlatList, Button } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
 
@@ -9,17 +9,11 @@ export default function DeckDetailScreen() {
   const router = useRouter();
 
   const deck = id ? decks[id] : undefined;
-
   if (!deck) return <Text>Deck not found</Text>;
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-      <Button
-        title="➕ Add Card"
-        onPress={() => router.push(`/(modals)/create-card?deckId=${deck.id}`)}
-      />
-
-      <Text style={{ fontSize: 24, marginVertical: 16 }}>{deck.title}</Text>
+      <Text style={{ fontSize: 24, marginBottom: 16 }}>{deck.title}</Text>
 
       <FlatList
         data={deck.cards}
@@ -49,6 +43,29 @@ export default function DeckDetailScreen() {
           </View>
         )}
       />
+
+      {/* Floating Action Button for adding a card */}
+      <TouchableOpacity
+        onPress={() => router.push(`/(modals)/create-card?deckId=${deck.id}`)}
+        style={{
+          position: "absolute",
+          bottom: 30,
+          right: 30,
+          backgroundColor: "#34C759",
+          width: 60,
+          height: 60,
+          borderRadius: 30,
+          justifyContent: "center",
+          alignItems: "center",
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.3,
+          shadowRadius: 3,
+          elevation: 5,
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 32, lineHeight: 32 }}>+</Text>
+      </TouchableOpacity>
     </View>
   );
 }
