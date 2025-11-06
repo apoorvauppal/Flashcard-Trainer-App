@@ -33,8 +33,7 @@ export default function DecksScreen() {
               />
               
 
-            </FlatList>
-          </>
+            </>
         )}
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
 
