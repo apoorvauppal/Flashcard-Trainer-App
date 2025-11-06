@@ -9,7 +9,7 @@ export default function DecksScreen() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredDecks = Object.values(decks).filter((deck) =>
-  deck.title.toLow
+  deck.title.toLowerCase
 )
 
   return (
