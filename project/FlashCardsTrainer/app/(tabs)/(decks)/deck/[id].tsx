@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { View, Text, FlatList, Button } from "react-native";
 import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
+import 
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>(); // <-- get [id] param
@@ -42,8 +43,7 @@ export default function DeckDetailScreen() {
     </View>
     <Text
       style={{ fontSize: 20 }}
-      onPress={() => toggleF}
-    //   onPress={() => toggleFavorite(deck.id, item.id)}
+      onPress={() => toggleFavorite(deck.id, item.id)}
     >
       {item.favorite ? "❤️" : "🤍"}
     </Text>
