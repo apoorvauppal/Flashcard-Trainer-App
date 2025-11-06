@@ -6,7 +6,7 @@ export default function DecksLayout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Decks", // 👈 this replaces "(decks)/index" in the header
+          title: "Decks", 
         }}
       />
       <Stack.Screen
