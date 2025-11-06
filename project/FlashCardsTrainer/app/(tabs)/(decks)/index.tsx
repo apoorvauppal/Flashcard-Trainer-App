@@ -8,6 +8,8 @@ export default function DecksScreen() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 
+  const filteredDecks = Object.values(decks).filter()
+
   return (
     <View style={{ flex: 1, padding: 16 }}>
       <FlatList
