@@ -5,7 +5,7 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>(); // <-- get [id] param
-  const { decks } = useContext(FlashContext);
+  const { decks, toggleFavorite } = useContext(FlashContext);
   const router = useRouter();
 
   const deck = id ? decks[id] : undefined;
