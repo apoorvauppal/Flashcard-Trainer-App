@@ -81,7 +81,8 @@ const getFavorites = () => {
       }
     })
   );
-  
+  return favs;
+
   };
 
   
