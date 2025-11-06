@@ -44,6 +44,7 @@ export default function DeckDetailScreen() {
           >
             {item.favorite ? "❤️" : "🤍"}
           </Text>
+          <View>
         )}
       />
     </View>
