@@ -51,38 +51,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
     });
   };
 
-  const toggleFavorite = (deckId: string, cardId: string) => {
-  setDecks((d) => {
-    const deck = d[deckId];
-    if (!deck) return d;
-
-    return {
-      ...d,
-      [deckId]: {
-        ...deck,
-        cards: deck.cards.map((c) =>
-          c.id === cardId ? { ...c, favorite: !c.favorite } : c
-        ),
-      },
-    };
-  });
-};
-
-const getFavorites = () => {
-  const favs: any[] = [];
-  Object.values(decks).forEach((deck) =>
-    deck.cards.forEach((c) => {
-      if (c.favorite) {
-        favs.push({
-          id: c.id,
-          question: c.question,
-          answer: c.answer,
-          deckId: deck.id,
-          deckTitle: deck.title,
-        });
-      }
-    })
-  );
+  
   return favs;
 };
 
