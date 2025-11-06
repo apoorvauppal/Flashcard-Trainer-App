@@ -6,7 +6,7 @@ export default function StudyLayout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Study Favorites", // 👈 header title for that screen
+          title: "Study Favorites", 
         }}
       />
     </Stack>
