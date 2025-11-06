@@ -25,7 +25,9 @@ export default function DecksScreen() {
               <View style={{padding:12, backgroundColor: '#ffe9b3', borderRadius:8, marginBottom:8,}}>
                 <Text style = {{fontWeight:"bold"}}>{item.question}</Text>
                 <Text>{item.answer}</Text>
-                
+                <Text style={{ fontSize: 12, color: "gray" }}>
+                  Deck: {item.deckTitle}
+                </Text>
               </View>
             )}
               >
