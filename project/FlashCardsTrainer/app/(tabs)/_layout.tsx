@@ -5,8 +5,8 @@ export default function TabsLayout(){
     return(
         <Tabs>
             <Tabs.Screen name='(decks)' options={{title:"Decks", tabBarLabel: "Decks", tabBarIcon: () => "🗂️"}}/>
-            <Tabs.Screen name='(study)' options={{title:"Study", tabBarLabel: "S", tabBarIcon: () => "🗂️"}}/>
-        
+            <Tabs.Screen name='(study)' options={{title:"Study", tabBarLabel: "S", tabBarIcon: () => "⭐"}}/>
+    
         </Tabs>
     );
 }
