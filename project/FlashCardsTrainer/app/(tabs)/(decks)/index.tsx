@@ -6,6 +6,7 @@ import { useRouter } from "expo-router";
 export default function DecksScreen() {
   const { decks } = useContext(FlashContext);
   const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
