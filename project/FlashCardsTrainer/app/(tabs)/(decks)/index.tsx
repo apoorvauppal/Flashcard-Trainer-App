@@ -24,6 +24,7 @@ export default function DecksScreen() {
             renderItem={({item}) => (
               <View style={{padding:12, backgroundColor: '#ffe9b3', borderRadius:8, marginBottom:8,}}>
                 <Text style = {{fontWeight:"bold"}}>{item.question}</Text>
+                
               </View>
             )}
               >
