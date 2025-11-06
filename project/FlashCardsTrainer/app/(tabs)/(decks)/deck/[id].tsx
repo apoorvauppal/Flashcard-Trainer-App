@@ -25,29 +25,22 @@ export default function DeckDetailScreen() {
         data={deck.cards}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-        <View
+          <View
             style={{
-            padding: 16,
-            marginBottom: 8,
-            backgroundColor: "#f0f0f0",
-            borderRadius: 8,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
+              padding: 16,
+              marginBottom: 8,
+              backgroundColor: "#f0f0f0",
+              borderRadius: 8,
+              flexDirection:"row",
+              justifyContent:"space-between",
+              alignItems:"center",
             }}
-        >
-            <View>
+          >
             <Text style={{ fontSize: 16 }}>{item.question}</Text>
             <Text style={{ color: "gray" }}>{item.answer}</Text>
-            </View>
-            <Text
-            style={{ fontSize: 20 }}
-            onPress={() => toggleFavorite(deck.id, item.id)}
-            >
-            {item.favorite ? "❤️" : "🤍"}
-            </Text>
-        </View>
+          </View>
         )}
-    }
+      />
+    </View>
   );
 }
