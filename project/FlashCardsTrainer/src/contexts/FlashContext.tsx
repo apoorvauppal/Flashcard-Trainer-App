@@ -49,6 +49,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
         [deckId]: { ...deck, cards: [...deck.cards, newCard] },
       };
     });
+};
     const toggleFavorite = (deckId: string, cardId: string) => {
   setDecks((d) => {
     const deck = d[deckId];
@@ -64,7 +65,7 @@ export const FlashProvider: React.FC<{children: React.ReactNode}> = ({children})
       },
     };
   });
-};
+
 
 const getFavorites = () => {
   const favs: any[] = [];
