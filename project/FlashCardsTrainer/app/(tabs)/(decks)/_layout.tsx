@@ -5,9 +5,9 @@ export default function DecksLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{
-          title: "Decks", 
-        }}
+        // options={{
+        //   title: "Decks", 
+        // }}
       />
       <Stack.Screen
         name="deck/[id]"
