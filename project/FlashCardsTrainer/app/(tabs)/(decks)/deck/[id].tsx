@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { View, Text, FlatList, Button } from "react-native";
 import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import toggleFa
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>(); // <-- get [id] param
