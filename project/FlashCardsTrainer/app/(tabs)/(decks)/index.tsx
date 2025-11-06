@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../src/contexts/FlashContext";
 import { useRouter } from "expo-router";
