@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, TextInput } from "react-native";
 import { FlashContext } from "../../../src/contexts/FlashContext";
 import { useRouter } from "expo-router";
 
@@ -14,6 +14,19 @@ export default function DecksScreen() {
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
+      <TextInput
+        placeholder="Search decks..."
+        value={searchQuery}
+        onChangeText={setSearchQuery}
+        style={{
+          padding: 12,
+          borderWidth: 1,
+          borderColor: "#ccc",
+          borderRadius: 8,
+          marginBottom: 16,
+          fontSize: 16,
+        }}
+      />
       <FlatList
         data={Object.values(decks)}
         keyExtractor={(item) => item.id}
