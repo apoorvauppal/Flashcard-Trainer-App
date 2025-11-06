@@ -88,7 +88,7 @@ const getFavorites = () => {
 
     
     return(
-        <FlashContext.Provider value = {{ decks, createDeck, addCardToDeck, toggleFavorites, getFavorites}}>
+        <FlashContext.Provider value = {{ decks, createDeck, addCardToDeck, toggleFavorite, getFavorites}}>
             {children}
         </FlashContext.Provider>
     );
