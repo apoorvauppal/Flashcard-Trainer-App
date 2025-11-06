@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
+import CardRow from "../../../../src/components/CardRow";
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
