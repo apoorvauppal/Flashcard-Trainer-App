@@ -20,8 +20,8 @@ export default function DecksScreen() {
         {favorites.length > 0 && (
           <>
             <Text style = {{fontSize:20, marginTop:20, marginBottom:10}}>Favorite Cards</Text>
-            <FlatList>
-              
+            <FlatLis data=>
+
             </FlatList>
           </>
         )}
