@@ -19,8 +19,8 @@ export default function DecksScreen() {
 
         {favorites.length > 0 && (
           <>
-            <Text>
-              
+            <Text style>
+
             </Text>
           </>
         )}
