@@ -43,7 +43,6 @@ export default function DeckDetailScreen() {
           onPress={() => toggleFavorite(deck.id, item.id)}
           >
             {item.favorite ? "❤️" : "🤍"}
-
           </Text>
         )}
       />
