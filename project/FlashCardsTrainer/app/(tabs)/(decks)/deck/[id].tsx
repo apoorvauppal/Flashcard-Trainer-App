@@ -4,7 +4,7 @@ import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
 
 export default function DeckDetailScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>(); // <-- get [id] param
+  const { id } = useLocalSearchParams<{ id: string }>();
   const { decks, toggleFavorite } = useContext(FlashContext);
   const router = useRouter();
 
@@ -31,21 +31,22 @@ export default function DeckDetailScreen() {
               marginBottom: 8,
               backgroundColor: "#f0f0f0",
               borderRadius: 8,
-              flexDirection:"row",
-              justifyContent:"space-between",
-              alignItems:"center",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <View>
-                <Text style={{ fontSize: 16 }}>{item.question}</Text>
-                <Text style={{ color: "gray" }}>{item.answer}</Text>
+              <Text style={{ fontSize: 16 }}>{item.question}</Text>
+              <Text style={{ color: "gray" }}>{item.answer}</Text>
+            </View>
+            <Text
+              style={{ fontSize: 20 }}
+              onPress={() => toggleFavorite(deck.id, item.id)}
+            >
+              {item.favorite ? "❤️" : "🤍"}
+            </Text>
           </View>
-          <Text style={{fontSize:20}}
-          onPress={() => toggleFavorite(deck.id, item.id)}
-          >
-            {item.favorite ? "❤️" : "🤍"}
-          </Text>
-          <View>
         )}
       />
     </View>
