@@ -22,7 +22,9 @@ export default function DecksScreen() {
             <Text style = {{fontSize:20, marginTop:20, marginBottom:10}}>Favorite Cards</Text>
             <FlatList data={favorites} keyExtractor={(item) => item.id}
             renderItem={({item}) => (
-              <View
+              <View>
+                
+              </View>
             )}
               >
               
