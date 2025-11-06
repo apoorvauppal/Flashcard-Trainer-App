@@ -40,7 +40,7 @@ export default function DeckDetailScreen() {
             <Text style={{ color: "gray" }}>{item.answer}</Text>
           </View>
           <Text style={{fontSize:20}}
-          onPress={() =>}
+          onPress={() => toggleFavorite}
           >
 
           </Text>
