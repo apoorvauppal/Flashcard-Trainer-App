@@ -36,9 +36,9 @@ export default function DeckDetailScreen() {
               alignItems:"center",
             }}
           >
-            <View></View>
-            <Text style={{ fontSize: 16 }}>{item.question}</Text>
-            <Text style={{ color: "gray" }}>{item.answer}</Text>
+            <View>
+                <Text style={{ fontSize: 16 }}>{item.question}</Text>
+                <Text style={{ color: "gray" }}>{item.answer}</Text>
           </View>
           <Text style={{fontSize:20}}
           onPress={() => toggleFavorite(deck.id, item.id)}
