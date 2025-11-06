@@ -7,7 +7,8 @@ export default function DecksScreen() {
   const { decks, createDeck, getFavorites } = useContext(FlashContext);
   const router = useRouter();
 
-  const favorites = getFa
+  const favorites = getFavorites();
+  const deckList = 
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
