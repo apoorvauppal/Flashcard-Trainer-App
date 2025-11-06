@@ -8,7 +8,7 @@ export default function DecksScreen() {
   const router = useRouter();
 
   const favorites = getFavorites();
-  const deckList = 
+  const deckList = Object.values(decks);
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
