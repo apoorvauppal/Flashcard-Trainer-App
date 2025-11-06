@@ -17,7 +17,10 @@ export default function DecksScreen() {
         onPress={() => router.push("/(modals)/create-deck")}
         />
 
-        {favorites.length > 0 &&}
+        {favorites.length > 0 && (
+          <>
+          </>
+        )}
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
 
       <FlatList
