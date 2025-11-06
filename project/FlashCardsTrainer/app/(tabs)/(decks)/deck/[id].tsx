@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import { View, Text, FlatList, Button } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { FlashContext } from "../../../../src/contexts/FlashContext";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { FlashContext } from "../../../../../src/contexts/FlashContext";
-import CardRow from "../../../../../src/components/CardRow";
 
 export default function DeckDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -10,46 +9,63 @@ export default function DeckDetailScreen() {
   const router = useRouter();
 
   const deck = id ? decks[id] : undefined;
-
-  if (!deck) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text style={{ fontSize: 18, color: "gray" }}>Deck not found</Text>
-      </View>
-    );
-  }
+  if (!deck) return <Text>Deck not found</Text>;
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
-      {/* ➕ Button to Add a New Card */}
-      <Button
-        title="➕ Add Card"
-        onPress={() => router.push(`/(modals)/create-card?deckId=${deck.id}`)}
-      />
+      <Text style={{ fontSize: 24, marginBottom: 16 }}>{deck.title}</Text>
 
-      {/* Deck Title */}
-      <Text style={{ fontSize: 24, marginVertical: 16, fontWeight: "600" }}>
-        {deck.title}
-      </Text>
-
-      {/* Card List */}
       <FlatList
         data={deck.cards}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <CardRow
-            question={item.question}
-            answer={item.answer}
-            favorite={item.favorite ?? false}
-            onToggleFavorite={() => toggleFavorite(deck.id, item.id)}
-          />
+          <View
+            style={{
+              padding: 16,
+              marginBottom: 8,
+              backgroundColor: "#f0f0f0",
+              borderRadius: 8,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <View>
+              <Text style={{ fontSize: 16 }}>{item.question}</Text>
+              <Text style={{ color: "gray" }}>{item.answer}</Text>
+            </View>
+            <Text
+              style={{ fontSize: 20 }}
+              onPress={() => toggleFavorite(deck.id, item.id)}
+            >
+              {item.favorite ? "❤️" : "🤍"}
+            </Text>
+          </View>
         )}
-        ListEmptyComponent={
-          <Text style={{ textAlign: "center", color: "gray", marginTop: 20 }}>
-            No cards yet. Add one to get started!
-          </Text>
-        }
       />
+
+      {/* Floating Action Button for adding a card */}
+      <TouchableOpacity
+        onPress={() => router.push(`/(modals)/create-card?deckId=${deck.id}`)}
+        style={{
+          position: "absolute",
+          bottom: 30,
+          right: 30,
+          backgroundColor: "#34C759",
+          width: 60,
+          height: 60,
+          borderRadius: 30,
+          justifyContent: "center",
+          alignItems: "center",
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.3,
+          shadowRadius: 3,
+          elevation: 5,
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 32, lineHeight: 32 }}>+</Text>
+      </TouchableOpacity>
     </View>
   );
 }
