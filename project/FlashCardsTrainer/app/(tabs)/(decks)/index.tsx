@@ -9,8 +9,8 @@ export default function DecksScreen() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredDecks = Object.values(decks).filter((deck) =>
-  deck.title.toLowerCase().includes(searchQuery.toLowerCase())
-)
+    deck.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <View style={{ flex: 1, padding: 16 }}>
