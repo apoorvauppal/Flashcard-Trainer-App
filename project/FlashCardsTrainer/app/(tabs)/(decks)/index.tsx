@@ -31,8 +31,6 @@ export default function DecksScreen() {
               </View>
             )}
               />
-              
-
             </>
         )}
       <Text style={{ fontSize: 24, marginBottom: 16 }}> Decks</Text>
